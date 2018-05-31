@@ -1,0 +1,202 @@
+@keyframes cambia_color {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: black;}
+    100% {background-color: red;}
+}
+
+#fotografías{
+	background: red;
+	float: left;
+	padding: 20%;
+	width: 100%;
+	margin: 5px;
+	animation-name: cambia_color;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+animation-duration: 10s;
+}
+
+@keyframes cambia_color_2 {
+    0%   {background-color: yellow;}
+    25%  {background-color: black;}
+    50%  {background-color: orange;}
+    100% {background-color: yellow;}
+}
+
+#fotografías2{
+	background: yellow;
+	float: left;
+	padding: 10%;
+	width: 100%;
+	padding-right: 40%;
+	margin: 5px;
+	animation-name: cambia_color_2;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+animation-duration: 10s;
+}
+
+@keyframes cambia_color_3 {
+    0%   {background-color: black;}
+    25%  {background-color: orange;}
+    50%  {background-color: purple;}
+    100% {background-color: black;}
+}
+
+#fotografías3{
+	background: black;
+	float: left;
+	padding: 5%;
+	color:white;
+	width: 100%;
+	margin: 5px;
+	animation-name: cambia_color_3;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+animation-duration: 10s;
+
+}
+
+@keyframes cambia_color_4 {
+    0%   {background-color: orange;}
+    25%  {background-color: purple;}
+    50%  {background-color: green;}
+    100% {background-color: orange;}
+}
+
+#fotografías4{
+	background: orange;
+	float: left;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	padding-right: 55%;
+	padding-left: 10%;
+	width: 100%;
+	margin: 5px;
+	animation-name: cambia_color_4;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+animation-duration: 10s;
+
+	
+}
+
+@keyframes cambia_color_5 {
+    0%   {background-color: purple;}
+    25%  {background-color: green;}
+    50%  {background-color: red;}
+    100% {background-color: purple;}
+}
+
+#fotografías5{
+	background: purple;
+	float: left;
+	padding:20%;
+	color: white;
+	width: 100%;
+	margin: 5px;
+	animation-name: cambia_color_5;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+animation-duration: 10s;
+
+	
+}
+
+@keyframes cambia_color_6 {
+    0%   {background-color: green;}
+    25%  {background-color: red;}
+    50%  {background-color: black;}
+    100% {background-color: green;}
+}
+
+#fotografías6{
+	background: green;
+	float: left;
+	padding: 10%;
+	width: 100%;
+	padding-right: 40%;
+	margin: 5px;
+	animation-name: cambia_color_6;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+animation-duration: 10s;
+
+	
+
+	
+	
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+	background: grey;
+}
+
+main>aside{
+	margin: 0 auto;
+	text-align: center;
+	
+
+}
+
+aside>h1{
+	background: black;
+    color:white;
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+    box-shadow: 5px 5px 3px white;
+
+}
+
+aside>p{
+	color:white;
+}
+
+
+
+section{
+	display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    
+}
+
+div{
+	 flex: 25%;
+    
+    padding: 0 4px;
+    margin: 0 auto;
+}
+
+div>p{
+	margin-top: 8px;
+    vertical-align: middle;
+
+}
+
+
+
+@media (max-width: 800px) and (min-width: 600px) {
+    div {
+        
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    div {
+        
+        flex: 100%;
+        max-width: 100%;}}
+
+
+
+

@@ -1,0 +1,53 @@
+
+div{
+	position: relative;
+	overflow: hidden;
+	height: 800px;
+}
+
+img{
+	position: absolute;
+	top:0%;
+	width: 100%;
+	
+
+}
+
+#imagen1{
+	
+left: 0;
+animation: animacion 16s;
+
+
+
+}
+
+#imagen2{
+
+	left:100%;
+	animation: animacion 32s;
+
+	
+
+}
+
+#imagen3{
+	
+	left:200%;
+	animation: animacion 64s;
+	
+	
+
+}
+
+@keyframes animacion{
+	0% {left:0%;
+
+	}
+
+	50%{left:100%;}
+
+	100%{left:200%;
+
+	}
+}

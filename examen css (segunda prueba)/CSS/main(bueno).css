@@ -1,0 +1,231 @@
+@import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great);
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+	color:#876655;		
+}
+
+body{
+	background-color: #f2efe8;
+}
+
+/*****************HEADER**********************/
+header{
+	width: 80%;
+	margin: 0 auto;
+}
+
+header>img{
+	width: 100%;
+	max-width:268px;
+	margin: 0 auto;
+	display: block;
+	padding-bottom: 0.5em;
+}
+
+header>h1{text-transform: uppercase;
+font-family:'Fredericka the Great', cursive;
+color:#876655;
+text-align: center;
+ }
+
+ header>h2{font-family: 'courier new';
+ 	color:#876655;
+ 	font-size: 1.5em;
+ 	text-align: center;
+ 	padding: 0.5em 0;
+ }
+
+
+
+/********************NAV*********************/
+nav{
+	width: 90%;
+	margin: 0 auto;
+}
+
+nav>ul{list-style-type: none;
+	width: 100%;
+	margin: 1em auto 0 auto;
+	overflow:hidden;
+}
+
+nav>ul>li{
+	float:left;
+	width: 23%;
+	text-align: center;
+	border: 1px solid #876655;
+	margin-right:2.666%;
+	box-sizing:border-box;
+	text-transform: uppercase;
+	font-family: courier new;
+}
+
+nav>ul>li.activo{
+	background-color:white;	
+}
+
+nav>ul>li:last-child{
+	margin-right:0;
+	float:right;
+}
+
+nav>ul>li:hover{
+	background: #d8c7bd;
+}
+
+nav>ul>li:active{
+	background: #ffffff;
+}
+
+nav>ul>li>a{
+	display:block;
+}
+
+
+/**********SECTION****************************/
+section{
+	overflow: hidden;
+	width: 90%;
+	margin:2em auto 3em auto;
+	text-align:center;
+	text-transform: uppercase;
+	font-family: courier new;
+	color:#876655;	
+}
+
+section #fotos{
+	border:5px solid white;
+	position:relative;
+	height:600px;
+}
+
+#fotos > img {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	object-fit: cover;
+}
+
+#fotos>img:last-child {
+	opacity:1;
+	transition:opacity 3s;
+}
+
+#fotos:hover>img:last-child {
+	opacity:0;
+}
+
+section > h2 {
+	text-transform: uppercase;
+	font-family: courier new;
+	font-size:2em;
+	color:#876655;	
+	margin:2em 0;
+}
+
+section > article{
+	border-right:1px solid #876655;
+	width:33%;
+	float:left;
+}
+
+section >article:last-child{
+	border:none;
+}
+
+section>article>p>span{
+	display:block;
+	text-transform: uppercase;	
+	font-size:1.75em;
+}
+
+/*******FOOTER********************************/
+
+footer{
+	border-top: 1px solid #876655;}
+
+#pie{
+	width: 80%;
+	margin: 0 auto;
+	padding: 1em 0em;
+}
+
+footer p{
+	color:#876655;
+	float:left;
+	width: 50%;
+}
+
+
+footer #redes{
+	float:right;
+}
+
+
+@media all and (max-width:600px){
+	header{
+		width:100%;
+	}
+	header>h2{
+		display:none;
+	}
+	nav{
+		width:96%;
+	}
+	nav>ul{
+		border: 1px solid #876655;
+	}
+	nav>ul>li,nav>ul>li:last-child {
+		float:none;
+		display:block;
+		width:100%;
+		border:0;
+
+	}
+
+	nav>ul>li{
+		border-bottom: 1px solid #876655;
+	}
+
+	nav>ul>li:last-child{
+		border:0;
+	}
+
+	section {
+		width:96%;
+		margin:1em auto 1em auto;
+	}
+
+	section #fotos{
+		border:3px solid white;
+		position:relative;
+		height:400px;
+	}
+
+	section > article{
+		float:none;
+		width:100%;
+		padding:0.5em 0;
+		border-right:initial;	
+		border-bottom:1px solid #876655;	
+	}
+
+	section > article:first-of-type{
+		border-top:1px solid #876655;	
+	}
+
+	section > h2 {
+		margin:1em 0;
+	}	
+	#pie{
+		width:96%;
+	}
+}
