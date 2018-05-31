@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>prueba</title>
+	<link rel="stylesheet" href="css/formstyle.css">
+	<script src="js/form.js"></script>
+</head>
+<body>
+<div id="formulario">
+<p>(*) Todos los campos son obligatorios</p>
+<form action="#" method="get">
+	<label for="nombre">Nombre</label> 
+	<input type="text"  id="nombre" size=25 maxlength=25 name="nombre" required />
+	<span class="error"></span>
+	<br />
+	<label for="apellidos">Apellidos</label> 
+	<input type="text"  id="apellidos" size=50 maxlength=50 name="apellidos" required />
+	<span class="error"></span>	
+	<br />	
+	<label class="encima" for="pass">Edad</label> 
+	<input type="text" id="edad" name="edad" pattern="^(1[8-9])|([2-6][0-9])|(7[0])$" maxlength="2" size="2" required>
+	<span class="error"></span>	
+	<br />
+	<label for="municipio">Municipio</label>
+	<select id="munipicio" name="municipio">
+		<option value="">Elija un municipio</option>
+		<option value="bur">Burriana</option>
+		<option value="cas">Castellón</option>
+		<option value="nul">Nules</option>
+		<option value="vil">Vila-real</option>
+	</select>
+	<br/>	
+	<div id="cursos">			
+		<label>Cursos (seleccione entre 1-3)</label>
+		<span class="error"></span>	
+		<label class="container">Web inicial
+		  <input type="checkbox" name="web">
+		  <span class="checkmark"></span>
+		</label>					
+		<label class="container">Web avanzado
+		  <input type="checkbox" name="web2">
+		  <span class="checkmark"></span>
+		</label>
+		<label class="container">Lenguajes servidor
+		  <input type="checkbox" name="servidor">
+		  <span class="checkmark"></span>
+		</label>
+		<label class="container">Base de datos
+		  <input type="checkbox" name="base">
+		  <span class="checkmark"></span>
+		</label>
+		<label class="container">UX
+		  <input type="checkbox" name="ux">
+		  <span class="checkmark"></span>
+		</label>								
+	</div>
+	<br />	
+		<label class="container">Aceptar los términos y condiciones
+		  <input type="checkbox" name="terminos">
+		  <span class="checkmark"></span>
+		</label>			
+	<input type="submit" value="enviar" name="enviar" formnovalidate disabled/>			
+</form>
+</div>
+
+</body>
+</html>

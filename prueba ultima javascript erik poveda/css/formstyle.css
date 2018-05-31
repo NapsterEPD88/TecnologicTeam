@@ -1,0 +1,216 @@
+body{
+	background: rgb(222,222,222);
+}
+
+div#formulario{
+	width: 70%;
+	max-width: 750px;
+	background: white;
+	border-radius: 20px;
+	overflow: hidden;
+	margin: 0 auto;
+	box-shadow: 0px 0px 8px;
+	margin-top: 1em;
+	position:relative;
+}
+
+span.error{
+	color:red;
+}
+
+input,select{
+	/*background: url(asterisco.png) center right no-repeat;*/
+	background-color:rgb(245,245,245);
+	background-size: 15px 10px;
+	border-radius: 1.5em;
+}
+
+input:required:focus{
+	background-color: rgba(230,230,0,0.2);
+}
+
+input[type="submit"]:disabled{
+	background: linear-gradient(lightgrey, grey);
+}
+
+input[type="submit"] {
+	float: right;
+	background: linear-gradient(#86b300, darkgreen);	
+	margin-right: 10%;
+	padding: 0px 15px;
+	border-radius: 20px;
+	color: white;
+	font-weight: bold;
+	border: none;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	font-family: arial;
+	margin-right: 10px;
+	box-shadow: 2px 5px 0px 0px rgb(222,222,222);
+	cursor:pointer;
+}
+
+
+span{
+	margin-right: 10px;
+}
+
+
+label{
+	min-width: 9em;
+	display: inline-block;
+	margin-left: 1em;
+	vertical-align: center;
+	font-weight: bold;
+}
+
+
+p{
+	font-size: 0.9em;
+	position:absolute;
+	top:0;
+	left:50%;
+	width:45%;
+	text-align:right;
+	font-weight: bold;
+}
+
+legend{
+	color: #86b300;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-family: impact;
+	margin-left: 5%;
+	margin-bottom: 1em;
+}
+
+input,select{
+	display: inline-block;
+	height: 1.5em;	
+	padding:0 0.5em;
+	margin:0.5em 0;
+}
+
+form {
+	margin:2em 1em 3em 1em;
+}
+
+fieldset{
+	margin-bottom:1em;
+}
+
+div#cursos>label.container{
+	margin-top:0.5em;
+	margin-left:3em;
+}
+
+div#cursos{
+	margin-top:1em;
+}
+/*Hacer una flecha
+span#caja{
+	border-color:black transparent transparent transparent;
+	border-width: 10px;
+	border-style: solid;
+}*/
+
+/************** CHECKBOX/RADIO ******************/
+/* Contenedor */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.radio{
+    display: inline-block;
+    min-width:initial;
+}
+
+
+/* Ocultar el checkbox por defecto del navegador */
+.container input[type=checkbox],.container input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Crear el nuevo checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.1em;
+    width: 1.1em;
+    background-color: #eee;
+    border:thin solid #ddd;
+}
+
+/* Crear el nuevo radiobutton */
+.radiomark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.2em;
+  width: 1.2em;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, poner un color gris */
+.container:hover input ~ .checkmark, .container:hover input ~ .radiomark {
+    background-color: #ccc;
+}
+
+/* Cuando es seleccionado ponerlo en verde */
+.container input:checked ~ .checkmark {
+    background-color: #86b300;
+    border:thin solid #86b300;    
+}
+
+.container input:checked ~ .radiomark {
+  background-color: #86b300;
+}
+
+
+/* Ponemos nuestra marca de checkbox (oculto cuando no esta marcado) */
+.checkmark:after,.radiomark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Enseñados la marca de checkbox */
+.container input:checked ~ .checkmark:after,.container input:checked ~ .radiomark:after {
+    display: block;
+}
+
+/* Estilo a nuestra marca del checkbox */
+.container .checkmark:after {
+    left: 0.3em;
+    top: 0;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/* Estilo a nuestra marca del radio */
+.container .radiomark:after {
+  top: 0.4em;
+  left: 0.4em;
+  width: 0.4em;
+  height: 0.4em;
+  border-radius: 50%;
+  background: white;
+} 
+

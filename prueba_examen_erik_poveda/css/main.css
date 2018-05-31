@@ -1,0 +1,97 @@
+div#visor{
+	position:relative;
+	width:50%;
+	height:40vh;
+	margin:0 auto;
+	border:1px solid black;
+	display:flex;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div#visor>div.flechas{
+	flex:0 0 5%;
+	box-sizing:border-box;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+div#derecha{
+	background:url(../img/derecha.png);
+	opacity:0.2;
+}
+div#izquierda{
+	background:url(../img/izquierda.png);
+	opacity:0.2;
+}
+
+.activo{
+	opacity:1;
+}
+
+div#visor>div#imagenes{
+	flex:0 0 90%;
+	border:none;
+}
+
+div#visor>div#imagenes>img{
+	height:100%;
+	object-fit: cover;
+	position:absolute;
+	left:30%;
+}
+
+div#nombre{
+	width:50%;
+	margin:0 auto;
+	flex-wrap: wrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div#nombre:not(:empty){
+	border:1px solid black;
+}
+
+div#nombre>p{
+	margin:0;
+	padding:0;
+	text-align:center;
+	font-size:3em;
+}
+
+/*******FOOTER********************************/
+
+footer{
+	margin-top:1em;
+	border-top: 1px solid #876655;
+}
+
+#pie{
+	width: 80%;
+	margin: 0 auto;
+	padding: 1em 0em;
+}
+
+footer p{
+	color:#876655;
+	float:left;
+	width: 50%;
+}
+
+
+footer #redes{
+	float:right;
+}
+
+footer #redes > a:first-child{
+	background-image: url(../img/face.png);
+}
+
+footer #redes > a:last-child{
+	background-image: url(../img/twitter.png);
+}
