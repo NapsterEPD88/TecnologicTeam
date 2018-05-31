@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Slide Shows</title>
+<script type="text/javascript">
+
+var ancho = 353;
+var total = 4;
+var position = new Array(0,ancho*-1,ancho*-2,ancho*-3,ancho*-total);
+var vel = 0;
+var pos = 0;
+var estado;
+var move;
+var posfinal = 0;
+var coef;
+var dir;
+var activo = true;
+
+function dispara(p,c){
+	if(activo){
+		estado = false;
+		coef = c;
+		dir = p;
+		if(!dir){
+			if(posfinal < position.length - 1){
+				posfinal = posfinal + 1;
+				move = setInterval(moving,20);
+				activo = false;
+				if(posfinal == position.length - 1){
+					document.getElementById("right").innerHTML = "";
+				}
+				if(document.getElementById("left").childNodes.length != 1){
+					document.getElementById("left").innerHTML = "<a href=\"javascript:dispara(true,"+ coef +");\"><img src=\"images/arrow_left.gif\" alt=\"\" /></a>";
+				}
+			}else{
+				activo = true;
+			}
+		}else{
+			if(posfinal > 0){
+				posfinal = posfinal - 1;
+				move = setInterval(moving,20);
+				activo = false;
+				if(posfinal == 0){
+					document.getElementById("left").innerHTML = "";
+			
+				}
+				if(document.getElementById("right").childNodes.length != 1){
+					document.getElementById("right").innerHTML = "<a href=\"javascript:dispara(false,"+ coef +");\"><img src=\"images/arrow_right.gif\" alt=\"\" /></a>";
+				}
+			}else{
+				activo = true;
+			}
+		}
+	}
+}
+
+function moving(){
+	if(!dir){
+		if(pos > position[posfinal] + (ancho/2)){
+			vel-= coef;
+		}else{
+			if(!estado){
+				pos = position[posfinal] + (ancho/2);
+				vel-= coef;
+			}
+			vel+= coef;
+			estado = true;
+		}
+		pos+= vel;
+		if(pos <= position[posfinal]){
+			pos = position[posfinal];
+			clearInterval(move);
+			vel = 0;
+			activo = true;
+		}
+	}else{
+		if(pos <= position[posfinal] - (ancho/2)){
+			vel+= coef;
+		}else{
+			if(!estado){
+				pos = position[posfinal] - (ancho/2);
+				vel+= coef;
+			}
+			vel-= coef;
+			estado = true;
+		}
+		pos+= vel;
+		if(pos >= position[posfinal]){
+			pos = position[posfinal];
+			clearInterval(move);
+			vel = 0;
+			activo = true;
+		}	
+	}
+	document.getElementById('slide').style.background = 'url(images/background.jpg) no-repeat '+ pos +'px';
+}
+
+</script>
+<style type="text/css">
+	body { background: white; margin: 0; }
+	a { outline: none; }
+	#slide { width: 353px; height: 200px; margin: 0 auto; background: url(images/background.jpg); }
+	.band { width: 30px; height: 200px; background: black; text-align: center; }
+	.band img { position: relative; top: 50%; margin-top: -20px; border: 0; outline: none; }
+	.left { float: left; }
+	.right { float: right; }
+</style>
+</head>
+
+<body>
+<div id="slide">
+<div class="band left" id="left"></div>
+<div class="band right" id="right"><a href="javascript:dispara(false,5);"><img src="images/arrow_right.gif" alt="" /></a></div>
+</div>
+</body>
+</html>

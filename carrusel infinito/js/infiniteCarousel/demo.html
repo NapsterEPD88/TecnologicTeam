@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>InfiniteCarousel jQuery Plugin Demo</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.infinitecarousel.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#carousel').infiniteCarousel({
+		displayTime: 6000,
+		textholderHeight : .25
+	});
+});
+</script>
+<style type="text/css">
+body {
+	padding-top: 50px;
+}
+#carousel {
+	margin: 0 auto;
+	width: 400px;
+	height: 390px;
+	padding: 0;
+	overflow: scroll;
+	border: 2px solid #999;
+}
+#carousel ul {
+	list-style: none;
+	width: 1500px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#carousel li {
+	display: inline;
+	float: left;
+}
+.textholder {
+	text-align: left;
+	font-size: small;
+	padding: 6px;
+	-moz-border-radius: 6px 6px 0 0;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="carousel">
+	<ul>
+		<li><img alt="" src="images/p1.jpg" width="500" height="213" /><p>Primera imagen</p>
+		</li>
+		<li><img alt="" src="images/p2.jpg" width="500" height="213" /><p>Segunda imagen</p>
+		</li>
+		<li><img alt="" src="images/p3.jpg" width="500" height="213" /><p>Tercera imagen</p></li>
+	</ul>
+</div>
+
+</body>
+</html>

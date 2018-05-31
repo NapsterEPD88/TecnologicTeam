@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Botones</title>
+</head>
+<style type="text/css">
+	img{
+		width: 100px;
+		height: 100px;
+	}
+
+
+	#lienzo {
+            width:300px;
+            height:200px;
+            border:1px solid #000;
+            overflow: hidden;
+</style>
+<body>
+
+
+ <h1>Pelota rebotando</h1>
+    <div>
+        <div>
+            <input type="button" value="Iniciar" id="iniciar" onclick="iniciar();"/>
+            <input type="button" value="Parar" id="parar" onclick="parar();"/>
+        </div>
+        <div id="lienzo">
+            <div id="imagen"></div>
+        </div>
+    </div>
+ 
+</form>
+
+<script language="javascript">
+var buttonobject= document.buttonform.button1;
+
+var buttonobject= document.buttonform.button2;
+
+// controlY, determina dirección vertical: 1-baja|0-sube
+        var controlY=Math.floor((Math.random() * 1) + 0);
+ 
+        // controlX, determina dirección vertical: 1-derecha|0-izquierda
+        var controlX=Math.floor((Math.random() * 1) + 0);
+ 
+        // definimos las variables que contienen la posicion de la pelota
+        var x=y=0;
+ 
+        // definimos la velocidad de movimiento en pixels
+        var velocidad=1;
+ 
+        // variable que contiene 
+        var idSetInterval=0;
+ 
+        // funcion que se ejecuta al pulsar el botón iniciar
+        function iniciar()
+        {
+            if(idSetInterval==0)
+            {
+                idSetInterval=setInterval("mover()",10);
+            }
+        }
+ 
+        // funcion que se ejecuta por cada iteracion del setInterval()
+        function mover()
+        {
+            // vertical
+            if(controlY==1)
+            {
+                y+=velocidad;
+            }else{
+                y-=velocidad;
+            }
+            if(y<0)
+            {
+                controlY=1;
+                y=velocidad;
+            }else if(y>=document.getElementById("lienzo").offsetHeight-22){
+                controlY=0;
+                y=document.getElementById("lienzo").offsetHeight-22;
+            }
+ 
+            // horizontal
+            if(controlX==1)
+            {
+                x+=velocidad;
+            }else{
+                x-=velocidad;
+            }
+ 
+            if(x<0)
+            {
+                controlX=1;
+                x=velocidad;
+            }else if(x>=document.getElementById("lienzo").offsetWidth-22){
+                controlX=0;
+                x=document.getElementById("lienzo").offsetWidth-22;
+            }
+            document.getElementById("imagen").style.left=String(x)+"px";
+            document.getElementById("imagen").style.top=String(y)+"px";
+        }
+ 
+        // funcion que se ejecuta para parar
+        function parar()
+        {
+            clearInterval(idSetInterval);
+            idSetInterval=0;
+        }
+ 
+        // funcion que se ejecta al iniciar
+        window.onload=function()
+        {
+            // posicionamos la pelota de manera aleatoria en la pantalla
+            y=Math.floor((Math.random() * (document.getElementById("lienzo").offsetHeight-22)) + 1);
+            x=Math.floor((Math.random() * (document.getElementById("lienzo").offsetWidth-22)) + 1);
+ 
+            document.getElementById("imagen").style.left=String(x)+"px";
+            document.getElementById("imagen").style.top=String(y)+"px";
+        }
+</script>
+
+
+</body>
+</html>

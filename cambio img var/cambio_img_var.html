@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cambio imagen</title>
+</head>
+<body onkeyup="cambiar()">
+	
+	    <img src="img/img4.jpg">
+    
+   
+    <script type="text/javascript">
+        function cambiar(){
+          var elemento=document.querySelector("img");
+          if (elemento.src.search("img/img4.jpg")>-1){
+              elemento.src="img/img2.jpg";
+          }
+          else{
+            elemento.src="img/img4.jpg";
+          }
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Carrusel Imágenes</title>
+<meta charset="utf-8">
+</head>
+<style type="text/css">
+	#imagen{
+		width: 800px;
+		height: 600px;
+		border-radius: 20px 20px 20px 20px;
+		margin: 0 auto;
+		display: block;
+		box-shadow: 2px 4px 6px rgba(0, 0, 0, .5);
+	}
+	h1{
+		text-align: center;
+		font-size: 50px;
+		color:white;
+		text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
+	}
+
+	body{
+		background-color: orange;
+	}
+</style>
+<body>
+<h1>Carrusel</h1>
+<!--<div>
+	<img src="img/imagen1.jpg" alt="">
+	<img src="img/imagen2.jpg" alt="">
+	<img src="img/imagen3.jpg" alt="">
+	<img src="img/imagen4.png" alt="">
+</div>-->
+<script>
+    /**
+     * Array con las imagenes y enlaces que se iran mostrando en la web
+     */
+    var imagenes=new Array(
+        ['img/imagen1.jpg'],
+        ['img/imagen2.jpg'],
+        ['img/imagen3.jpg'],
+        ['img/imagen4.png']
+    );
+ 
+    /**
+     * Funcion para cambiar la imagen y link
+     */
+    function rotarImagenes()
+    {
+        // obtenemos un numero aleatorio entre 0 y la cantidad de imagenes que hay
+        var index=Math.floor((Math.random()*imagenes.length));
+ 
+        // cambiamos la imagen y la url
+        document.getElementById("imagen").src=imagenes[index][0];
+        
+    }
+ 
+    /**
+     * Función que se ejecuta una vez cargada la página
+     */
+    onload=function()
+    {
+        // Cargamos una imagen aleatoria
+        rotarImagenes();
+ 
+        // Indicamos que cada 5 segundos cambie la imagen
+        setInterval(rotarImagenes,5000);
+    }
+</script>
+ 
+<img src="" id="imagen"></a>
+
+</body>
+</html>
