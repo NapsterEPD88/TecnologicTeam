@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+</head>
+<style type="text/css">
+.mifecha2 {
+   border: 1px solid #ddd;
+   padding: 3px;
+   text-align: center;
+   font-family:verdana, arial;
+   font-size: 10pt;
+   overflow: hidden;
+   width: 100%
+}
+.mifecha2 .mesano{
+   float: left;
+   padding: 3px;
+   font-weight: bold;
+}
+.mifecha2 .dia, .mifecha2 .diaactual{
+   width: 20px;
+   padding: 3px;
+   margin-left: 3px;
+   background-color: #ddd;
+   float: left;
+}
+.mifecha2 .diaactual{
+   background-color: #999;
+   font-weight: bold;
+}
+
+.reloj { width: 150px; height: 30px; padding: 5px 10px; border: 1px solid black; 
+         font: bold 1.5em dotum, "lucida sans", arial; 
+         text-align: center;
+         float: right; margin: 1em 3em 1em 1em; }
+
+</style>
+<body>
+<div id="reloj" class="reloj">00 : 00 : 00
+</div>
+</body>
+</html>
+
+<script>
+var f=new Date();
+var ano = f.getFullYear();
+var mes = f.getMonth();
+var dia = f.getDate();
+var estiloDia;
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var diasMes = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+var diaMaximo = diasMes[mes];
+if (mes == 1 && (((ano % 4 == 0) && (ano % 100 != 0)) || (ano % 400 == 0)))
+   diaMaximo = 29;
+document.write('<div class="mifecha2">');
+document.write('<div class="mesano">' + meses[mes] + ' ' + ano + ':</div>');
+
+for (i=1; i<=diaMaximo; i++){
+   if(i == dia)
+      estiloDia = "diaactual";
+   else
+      estiloDia = "dia";
+   document.write('<div class="' + estiloDia + '">' + i + '</div>');
+}   
+document.write('</div>');
+
+function actual() {
+         fecha=new Date(); //Actualizar fecha.
+         hora=fecha.getHours(); //hora actual
+         minuto=fecha.getMinutes(); //minuto actual
+         segundo=fecha.getSeconds(); //segundo actual
+         if (hora<10) { //dos cifras para la hora
+            hora="0"+hora;
+            }
+         if (minuto<10) { //dos cifras para el minuto
+            minuto="0"+minuto;
+            }
+         if (segundo<10) { //dos cifras para el segundo
+            segundo="0"+segundo;
+            }
+         //ver en el recuadro del reloj:
+         mireloj = hora+" : "+minuto+" : "+segundo;   
+             return mireloj; 
+         }
+function actualizar() { //función del temporizador
+   mihora=actual(); //recoger hora actual
+   mireloj=document.getElementById("reloj"); //buscar elemento reloj
+   mireloj.innerHTML=mihora; //incluir hora en elemento
+    }
+setInterval(actualizar,1000); //iniciar temporizador
+</script>

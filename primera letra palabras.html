@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>letra de palabras</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	var palabras = "prueba para obtener primera letra",
+    resultado= palabras.concat(' ').replace(/([a-zA-Z]{0,} )/g, function(match){ return (match.trim()[0]);}); 
+    
+document.write(resultado);
+</script>
+</html>

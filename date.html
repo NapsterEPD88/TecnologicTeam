@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Date js</title>
+
+<p>Click the button to display the time as a string.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<font size="1">
+<script languaje="JavaScript"> 
+var mydate=new Date() 
+var year=mydate.getYear() 
+if (year < 1000) 
+year+=1900 
+var day=mydate.getDay() 
+var month=mydate.getMonth() 
+var daym=mydate.getDate() 
+if (daym<10) 
+daym="0"+daym 
+var dayarray=new Array("Domingo,","Lunes,","Martes,","Miércoles,","Jueves,","Viernes,","Sábado,")
+var montharray=new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre")
+document.write("<font color='black' face='Georgia' style='font-size:30pt'>"+dayarray[day]+" "+daym+" de "+montharray[month]+" de "+year+"</font>")
+
+function myFunction() {
+    var d = new Date();
+    var n = d.toLocaleTimeString();
+    document.getElementById("demo").innerHTML = n;
+} 
+</script></font>

@@ -1,0 +1,77 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>demo</title>
+<script src="convertPointFromPageToNode.js"></script>
+</head>
+<body>
+<div id='log' style="position:fixed;right:0;top:0;"></div> 
+<div style="height: 19em;"></div>
+<!--<div /*style="
+-o-transform:translate(130px, -200px) skew(60deg, 0);
+-webkit-transform:translate(130px, -200px) skew(60deg, 0);
+-ms-transform:translate(130px, -200px) skew(60deg, 0);
+-moz-transform:translate(130px, -200px) skew(60deg, 0);
+transform:translate(130px, -200px) skew(60deg, 0);
+">*/-->
+<div id="clickMe" style="outline:1px solid silver;
+padding: 0px;
+/*-o-transform:rotate(25deg);
+-webkit-transform:rotate(25deg);
+-ms-transform:rotate(25deg);
+-moz-transform:rotate(25deg);
+transform:rotate(25deg);*/
+left:0;top:0;
+width:300px;
+height:300px;
+background: ghostwhite;
+" ></div>
+
+</div>
+
+<script>
+var log = document.getElementById('log');
+var element = document.getElementById('clickMe');
+function a0(element, pageX, pageY) {
+  return window.webkitConvertPointFromPageToNode != undefined ? window.webkitConvertPointFromPageToNode(element, new WebKitPoint(pageX, pageY)) : {x: undefined, y: undefined};
+}
+function a1(element, pageX, pageY) {
+  return {x: pageX, y: pageY};
+}
+function a2(element, pageX, pageY) {
+  return window.convertPointFromPageToNode != undefined ? window.convertPointFromPageToNode(element, pageX, pageY) : {x: undefined, y: undefined};
+}
+function b0(element, offsetX, offsetY) {
+  return window.webkitConvertPointFromNodeToPage != undefined ? window.webkitConvertPointFromNodeToPage(element, new WebKitPoint(offsetX, offsetY)) : {x: undefined, y: undefined};
+}
+function b1(element, offsetX, offsetY) {
+  return {x: offsetX, y: offsetY};
+}
+function b2(element, offsetX, offsetY) {
+  return window.convertPointFromNodeToPage != undefined ? window.convertPointFromNodeToPage(element, offsetX, offsetY) : {x: undefined, y: undefined};
+}
+function test(name, point) {
+  return "<div>" + 
+         "<div>" + name + ": " + "</div>" +
+         "<div>" +
+         (point.x == undefined ? "undefined" : point.x.toFixed(1)) + ", " +
+         (point.y == undefined ? "undefined" : point.y.toFixed(1)) +
+         "</div>" +
+         "</div>";
+}
+function onMouseMove(event) {
+  log.innerHTML = (event.target !== element ? "<div style=\"color: red\">The element should be under the mouse pointer</div>" : "") +
+                  test("offsetX/offsetY", event.target === element ? b1(element, event.offsetX, event.offsetY) : {x: undefined, y: undefined}) +
+                  test("webkitConvertPointFromPageToNode", a0(element, event.pageX, event.pageY)) +
+                  test("convertPointFromPageToNode", a2(element, event.pageX, event.pageY)) +
+                  test("pageX/pageY", a1(element, event.pageX, event.pageY)) +
+                  test("webkitConvertPointFromNodeToPage", event.target === element ? b0(element, event.offsetX, event.offsetY) : {x: undefined, y: undefined}) +
+                  test("convertPointFromNodeToPage", event.target === element ? b2(element, event.offsetX, event.offsetY) : {x: undefined, y: undefined});
+}
+document.addEventListener("mousemove", onMouseMove, false);
+</script>
+</body>

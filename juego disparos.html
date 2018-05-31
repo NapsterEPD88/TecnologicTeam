@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<canvas id="c">
+</canvas><script>
+var c=document.getElementById("c");
+var a=c.getContext("2d");
+</script>
+<script src="meteors.js">
+</script>
+<script type="text/javascript">
+	p=[],
+//
+// Meteoros en 1K de Javascript (después de compresión)
+// (c) 2012-2013 por Oscar Toledo G. (@nanochess)
+// http://www.nanochess.org/
+//
+// Creación: 23-feb-2012.
+// Última revisión: 29-mar-2013.
+//
+// En este código fuente varias expresiones están repetidas para obtener más
+// compactación del compresor JS de @aivopaas. http://js1k.com/demo/1127
+// y posteriormente http://www.iteral.com/jscrush/
+//
+// Arreglo de objetos visuales (1a. línea para evadir bug en compresor 1127)
+// Arreglo para el teclado
+q=[],
+// <canvas> ancho/altura, salva además para uso posterior
+c.width=d=444,
+c.height=h=252,
+// window.onkeydown/onkeyup, anota tecla oprimida/soltada
+onkeydown=function(w){
+  q[w.which]=.1};
+// No elimine punto y coma al final de ambas funciones o falla después de comprimir
+onkeyup=function(w){
+  q[w.which]=0};
+// Compresión de los nombres de función de <canvas>
+for(Z in a)a[Z[0]+(Z[6]||Z[2])]=a[Z];
+// Añade un nuevo objeto a la lista visual
+function o(x,y,r,a,c,s,o,t){
+p[p.length]={
+// Coordenadas X,Y
+  x:x,y:y,
+// Rotación (en radianes) para visualizar
+  r:r,
+// Rotación (en radianes) para desplazamiento
+  w:r,
+// Escala
+  u:c,
+// Puntuación (nave) o quién disparó esta bala (3=nave, 0=enemigo)
+  s:t,
+// Tipo de objeto
+// 0 - Nave del jugador
+// 1 - Nave enemiga
+// 2 - Meteoro
+// 3 - Chispa
+// 4 - Bala
+  t:s,
+// Velocidad
+  v:a,
+// Duración
+  z:o}
+}
+// Bucle principal llamado continuamente
+setInterval(
+// Función conteniendo el bucle principal
+function(){
+// Mantiene contexto canvas en alcance
+with(a)
+  with(
+// Líneas gordas para todos los objetos
+    lineWidth=2,
+// Limpia el canvas
+    fc(0,0,d,h),
+// Si lista vacía o nave del jugador fue eliminada entonces reinicia
+    p.length&&!p[0].t||
+// Centra nave del jugador, apunta arriba
+      o(d/2,h/2,p.length=0,0,1,0,1,0),
+// Añade objeto Math al alcance
+    Math)
+// Bucle a través de la lista visual en reversa para no tener problemas con borrado
+    for(e=p.length;e--;)
+// Incluye objeto visual en alcance (ahora 3 objetos en alcance!)
+      with(p[e]){
+// Salva contexto antes de dibujar objeto
+        sv();
+// Sombra amplia
+        shadowBlur=9,
+// Color para puntuación, notese que reusa cadena
+        fillStyle=
+// Propiedades de sombra, verde radioactivo :P lo hace lucir mejor
+        shadowColor="#5f0",
+// Selecciona color para objeto, el 3er. caracter es compartido entre objetos :)
+        strokeStyle="#"+"fcfdafd62f8".substr(t+t,3);
+// ¿Es un enemigo?
+  2-t||
+// ...sí, inercia, y ¿ahora quieto?
+    (v*=.97)<.1&&
+// ...sí, dispara al jugador
+      o(x,y,
+// ...bala directa al jugador...
+         atan2(p[0].x-x,y-p[0].y,
+// ...rota el enemigo a la izq/der aleatorio...
+               w=r+=random()-.5,
+// ...escoge velocidad aleatoria para enemigo, actualiza desplazamiento...
+               v=4*random())
+// ...ángulo de bala aleatorio entre -0.2 y 0.2 radianes de la dirección exacta
+//    para no hacerlo muy difícil...
+           +.4*random()-.2,
+// ...note que no incluye último argumento, esto señala bala disparada por enemigo
+         7,1,4,35);
+// ¿Es el jugador?
+  t||(
+// ...inercia...
+    v*=.97,
+// Oprimir espacio dispara balas, reutiliza tiempo para tirar más lento
+    q[32]&&!z&&o(x,y,r,
+// Note que último argumento señala bala disparada por nave
+      7,1,4,35,z=3),
+// Visualiza puntuación, note que reutiliza números
+    fx(s,4,20),
+// Oprimir flechas izq/der rota la nave del jugador
+    r+=-q[37]||q[39]||0,
+// Escoge meteoro o nave enemiga
+    i=random()<.2,
+// Añade objetos en posiciones aleatorias cuando hay menos de 6 objetos
+// Note que los objetos se añaden lejos y alrededor de la nave del jugador
+    p.length<6&&
+      o(x+d/4+.4*random()*d,
+        y+h/4+.4*random()*h,7*random(),1,i?1:4,i+1),
+// Oprimir flecha de arriba acelera la nave y actualiza desplazamiento
+    q[38]&&(w=r,v=3)
+  );
+// Traslada para dibujar y calcular nueva posición,
+// mantiene dentro del canvas con margen para entrada suave
+        ta(x=(x+d+sin(w)*v+15*u)%(u*10+d)-u*5,
+           y=(y+h-cos(w)*v+15*u)%(u*10+h)-u*5);
+// Aplica rotación
+        rt(r);
+// Aplica escala
+        sa(u+.1,u+.1);
+// Comienza a dibujar
+        ba();
+// Cada figura contenida en un solo número
+// 2602934 = 8,8-4,6-0,8-4,0 (nave apuntando arriba)
+// 26573945564232 = 0,5-2,8-4,7-7,8-8,2-7,0-4,1-1,0 (meteoro)
+// 39023120720 = 2,4-0,7-8,7-6,4-6,1-2,1 (parecido a cápsula Apolo :P)
+// 207489 = 3,5-5,5-4,3 (triángulo apuntando arriba)
+// 207489 = 3,5-5,5-4,3 (lo mismo)
+        for(i=[2602934,26573945564232,39023120720,207489,207489][t];
+// el número se vuelve cero al terminar el dibujo
+          i;
+// Extrae un par de coordenadas. Modulo 9 da unidad 0-8 (espacio de dibujo)
+          i-=f=i%9,i/=9,
+// ...substrae unidad antes de división por 9 para mantener entero
+          i-=g=i%9,i/=9,
+// dibuja línea
+          ln(f-4,g-4));
+// Cierra la figura
+        ca();
+// Pinta la figura
+        sr();
+// Restaura el contexto
+        re();
+// Si manejando nave del jugador activa o bala disparada hace un cuadro
+// Checa colisión contra otros objetos
+          for(f=!t*u|3<t&z<35?p.length:0;f--;)
+// Se asegura que no sea el mismo objeto y sea nave o meteoro...
+            if(f-e&&p[f].t<3
+// ...dentro de caja de colisión
+               &abs(p[f].x-x)<4*p[f].u&abs(p[f].y-y)<4*p[f].u)
+// Ok, hay una colisión
+// Si es el jugador entonces marca como muerto y prepara para
+// desaparecer en unos segundos, otros objetos dan puntuación
+// si es bala del jugador y desaparecen en próximo cuadro.
+// Pone el objeto colisionado en alcance.
+// (¡ahora cuatro objetos en alcance!, no haga esto en casa)
+              with(z=e?(s&&++p[0].s,1):(u=0,99),p[f])
+// Añade chispa 1
+                   o(x,y,7*random(),9,1,3,9),
+// Añade chispa 2
+                   o(x,y,7*random(),9,1,3,9),
+// Añade chispa 3
+                   o(x,y,7*random(),9,1,3,9),
+// Añade chispa 4
+                   o(x,y,7*random(),9,1,3,9),
+// Añade chispa 5
+                   o(x,y,7*random(),9,1,3,9),
+// Añade chispa 6
+                   o(x,y,7*random(),9,1,3,9),
+// El primer meteoro recibe un impulso que lo gira
+                  r+=random(),
+// ¿Debe cortar el meteoro en dos?
+                   --u?
+// Crea un segundo meteoro con más impulso
+                  o(x,y,r+random(),
+// Ambos meteoros aceleran y obtienen el mismo tamaño pequeño
+                    ++v,u,1)
+// Se prepara para eliminar objeto, ya u=0 si 'f' apunta a nave del jugador
+                  :z=f?1:99;
+// ¿Tiempo de borrar objeto? Elimina objeto de lista visual
+        z&&!--z&&e|!u&&p.splice(e,1)
+      }
+// Fin de la función
+}
+// Refresca 30 veces por segundo (1000/30 = 33 milliseconds)
+,33);
+</script>
+</html>

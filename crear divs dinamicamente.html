@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1 class="text-light text-center">Wikisearch</h1>
+<div class="container">
+    <div class="row top-space">
+        <div class="col-lg-6">
+            <div class="input-group">
+              <input id="txt-box" type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button" id="search">Search!</button>
+              </span>
+            </div>
+        </div>
+        <div class="col">
+            <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" class="text-light">See a random article</a>
+        </div>
+        <div class="container top-space" id="contenedor">
+            <div class="card text-white bg-danger mb-3" style="max-width: 50rem;">
+              <div class="card-header">Result of search</div>
+              <div class="card-body">
+                <h4 class="card-title" id="wiki_title"></h4>
+                <p class="card-text" id="wiki_content"></p>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#search').click(function () {
+        var txt = $('#txt-box').val();
+        var title = convert_case(txt);
+
+        $.ajax({
+            url: "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&list=search&continue=&srsearch="+title+"&format=json",
+            dataType: 'jsonp',
+            type: 'POST',
+            headers: { 'Api-User-Agent': 'Example/1.0' },
+        }).done(update).fail(handleErr);
+    });
+});
+
+	function update(response) {
+    console.log(response);
+
+    $.each(response.query.search, function(i, item) {
+        // Trato de crear nuevos divs con clases similares a las del html original
+        var topCard = $('<div></div>').addClass("card text-white bg-danger mb-3");
+        var cardHeader = $('<div></div>').addClass("card-header top-space").appendTo($(topCard));
+        var cardBody = $('<div></div>').addClass("card-body").appendTo($(topCard));
+        var h4Title = $('<h4 id="wiki_title"></h4>').addClass("card-title").html(item.title).appendTo($(cardBody));
+        var pContent = $('<p id="wiki_content"></p>').addClass("card-text").html(item.snippet).appendTo($(cardBody));
+
+        $('#contenedor').append($(topCard));
+    });
+}
+
+function handleErr(jqxhr, textStatus, err) {
+    console.log("Request Failed: " + textStatus + ", " + err);
+}
+
+function convert_case(str) {
+    var lower = str.toLowerCase();
+    return lower.replace(/(^| )(\w)/g, function(x) {
+        return x.toUpperCase();
+    });
+}
+</script>
+</html>

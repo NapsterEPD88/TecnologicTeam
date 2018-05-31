@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Menú</title>
+</head>
+<body>
+	<style type="text/css">
+		ul, li {
+				list-style:none;
+			}
+.nav > li {
+				float:left;
+  padding:0px 10px;
+  background-color: orange;
+			}
+			
+		.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+				background-color: :red;
+			}
+.nav li:hover > ul {
+				display:block !important;
+				background-color: purple;
+			}
+
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div id="header">
+			<ul class="nav">
+			
+      </ul>
+</div>
+<script type="text/javascript">
+	var ttMenuGral = [
+                    {
+                        "cSistema": "PMS",
+                        "cMenu": "Ama Llaves",
+                        "cSubMenu": "",
+                        "cOpcion": "",
+                        "cPrograma": "",
+                        "iSec": 6,
+                        "lexiste": false,
+                        "cRowID": "0x000000000000048d",
+                        "lError": false,
+                        "cErrDesc": ""
+                    },
+                    {
+                        "cSistema": "PMS",
+                        "cMenu": "Auditoria",
+                        "cSubMenu": "",
+                        "cOpcion": "",
+                        "cPrograma": "",
+                        "iSec": 5,
+                        "lexiste": false,
+                        "cRowID": "0x0000000000000488",
+                        "lError": false,
+                        "cErrDesc": ""
+                    },
+                    {
+                        "cSistema": "PMS",
+                        "cMenu": "Caja",
+                        "cSubMenu": "",
+                        "cOpcion": "",
+                        "cPrograma": "",
+                        "iSec": 4,
+                        "lexiste": false,
+                        "cRowID": "0x000000000000048b",
+                        "lError": false,
+                        "cErrDesc": ""
+                    },
+                    {
+                        "cSistema": "PMS",
+                        "cMenu": "Consultas",
+                        "cSubMenu": "",
+                        "cOpcion": "",
+                        "cPrograma": "",
+                        "iSec": 1,
+                        "lexiste": false,
+                        "cRowID": "0x0000000000000481",
+                        "lError": false,
+                        "cErrDesc": ""
+                    },
+                  ]
+subMenuGral=[
+                    {
+                        "cSistema": "PMS",
+                        "cMenu": "Ama Llaves",
+                        "cSubMenu": "Estado de Cuartos",
+                        "cOpcion": "",
+                        "cPrograma": "amallaves/estado_cuartos",
+                        "iSec": 601,
+                        "lexiste": false,
+                        "cRowID": "0x000000000000049d",
+                        "lError": false,
+                        "cErrDesc": ""
+                    },
+                    {
+                        "cSistema": "PMS",
+                        "cMenu": "Ama Llaves",
+                        "cSubMenu": "Fuera de Orden",
+                        "cOpcion": "",
+                        "cPrograma": "amallaves/fuera_orden",
+                        "iSec": 604,
+                        "lexiste": false,
+                        "cRowID": "0x000000000000049c",
+                        "lError": false,
+                        "cErrDesc": ""
+                    },
+                    {
+                        "cSistema": "PMS",
+                        "cMenu": "Ama Llaves",
+                        "cSubMenu": "Fuera de Servicio",
+                        "cOpcion": "",
+                        "cPrograma": "amallaves/fuera_servicio",
+                        "iSec": 603,
+                        "lexiste": false,
+                        "cRowID": "0x0000000000000486",
+                        "lError": false,
+                        "cErrDesc": ""
+                    }
+                ]
+
+
+crearMenu(ttMenuGral);
+crearSubMenu(subMenuGral);
+
+function crearMenu(menu){
+  console.log(menu)
+  for (var i = 0; i < menu.length; i++) {
+//pintamos los menus y aca menu le damos de class el menu[i].cMenu,
+// para utilizarlo en el momento de agregar el submenu
+  var className = menu[i].cMenu.replace(" ","");
+    $(".nav").append("<li   class="+className+">"+menu[i].cMenu+"</li>")
+}
+}
+
+function crearSubMenu(menu){
+  for (var i = 0; i < menu.length; i++) {
+//obtenemos la class que le dimos en la function pasada para 
+//agregar el  submenu
+  var className = menu[i].cMenu.replace(" ","");
+    if(i == 0){
+//agregamos un <ul> el cual va hacer el contenedor del submenu
+        $("."+className).append('<ul class="subNav"></ul>')   
+    }
+//y por ultimo agregamos los item al submenu
+    $("."+className +" ul").append("<li   class="+className+">"+menu[i].cSubMenu+"</li>")
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Colegas_Variables</title>
+</head>
+ 
+
+ <h1>Nombre Colegas</h1>
+
+
+<script>
+
+    var alumnos=["Isaac","Vero","Sonia","Pablo","Guillem","Miguel","Juan","Juan Diego","Zakaria","Adrian","Erik","Cristian"];
+    
+    for (var i=0;i<alumnos.length;i++){
+	
+		if (alumnos[i]=="Vero"||alumnos[i]=="Sonia"){
+		      document.write("<span style='color:yellow'>Posicion " + (i+1) + ": " + alumnos[i] + "</span><br>");
+	    }
+		else{
+		      document.write("<span>Posicion " + (i+1) + ": " + alumnos[i] + "</span><br>");	
+	    }
+  	}
+
+</script>  
+
+<h1>Nombre Colegas</h1>
+
+
+<script>
+
+    var alumnos=["Isaac","Vero","Sonia","Pablo","Guillem","Miguel","Juan","Juan Diego","Zakaria","Adrian","Erik","Cristian"];
+    
+    for (var i=alumnos.length-1;i>=0;i--){
+	    
+	    if (alumnos[i]=="Vero"||alumnos[i]=="Sonia"){
+		      document.write("<span style='color:yellow'>Posicion " + (i+1) + ": " + alumnos[i] + "</span><br>");
+	    }
+		else{
+		      document.write("<span>Posicion " + (i+1) + ": " + alumnos[i] + "</span><br>");	
+	    }
+  	}
+
+</script> 
+
+
+<h1>Nombre Colegas</h1>
+
+
+<script>
+
+    var alumnos=["Isaac","Vero","Sonia","Pablo","Guillem","Miguel","Juan","Juan Diego","Zakaria","Adrian","Erik","Cristian"];
+    
+   
+  	var i=0;
+    while(i<alumnos.length){
+	    if (alumnos[i]=="Vero"||alumnos[i]=="Sonia"){
+		      document.write("<span style='color:yellow'>Posicion " + (i+1) + ": " + alumnos[i] + "</span><br>");
+	    }
+		else{
+		      document.write("<span>Posicion " + (i+1) + ": " + alumnos[i] + "</span><br>");	
+        }
+        i++;
+    }
+
+</script>  
+
+ <h1>Nombre Colegas</h1>
+
+
+<script>
+
+    var alumnos=["Isaac","Vero","Sonia","Pablo","Guillem","Miguel","Juan","Juan Diego","Zakaria","Adrian","Erik","Cristian"];
+    
+    for (var i=0;i<alumnos.length;i++){
+	
+		/*if (alumnos[i].charAt(0)=="J"||alumnos[i].charAt(0)=="Z"){*/
+		if (alumnos[i].search(/^[JZ]/i)==0){	
+		      document.write("<span style='color:red'>Posicion " + (i+1) + ": " + alumnos[i] + "</span><br>");
+	    }
+	    if (alumnos[i].search(/[a][n]$/i)>0){	
+		      document.write("<span style='color:blue'>Posicion " + (i+1) + ": " + alumnos[i] + "</span><br>");
+	    }
+		else{
+		      document.write("<span>Posicion " + (i+1) + ": " + alumnos[i] + "</span><br>");	
+	    }
+  	}
+
+</script>  
+
+
+
+</body>
+</html>
