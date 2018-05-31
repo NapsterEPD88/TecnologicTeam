@@ -1,0 +1,23 @@
+body{
+	position: relative;
+}
+
+div:first-child{
+	border: 2px solid red;
+}
+
+div:last-child{
+	opacity: 0;
+	transition: 4s opacity, 3s top, 2.5s line-height;
+	line-height: 2.3;
+	
+	top:150px;
+
+}
+div:last-child:hover{
+	opacity: 1;
+	
+	position:absolute;
+	top: 90px;
+	line-height: 1.3;
+}

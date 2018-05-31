@@ -1,0 +1,32 @@
+body>img:nth-child(1){
+	width: 800px;
+	height: 600px;
+	float: left;
+	position: relative;
+	margin-left: 0;
+	margin-top: 0;
+
+
+}
+
+body>img:nth-child(2){
+	width: 800px;
+	height: 600px;
+	float: left;
+	transition: top 4s, left 4s;
+	position: absolute;
+	top: 600px;
+	left: 8px;
+	
+
+}
+
+body>img:nth-child(2):hover{
+	width: 800px;
+	height: 600px;
+	float: left;
+	position: absolute;
+	top:8px;
+	left:8px;
+	
+}
