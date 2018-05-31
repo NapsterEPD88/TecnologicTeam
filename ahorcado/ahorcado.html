@@ -1,0 +1,149 @@
+<HTML>
+	<HEAD>
+   	<TITLE>Ahorcado</TITLE>
+      <SCRIPT>
+      	var peliculas=new Array();
+         var peli,n;
+         var fallos;
+         function reiniciar()
+         {
+         	var i;
+            fallos=0;
+            imagen0.style.visibility="visible";
+            imagen1.style.visibility="hidden";
+            imagen2.style.visibility="hidden";
+            imagen3.style.visibility="hidden";
+            imagen4.style.visibility="hidden";
+            imagen5.style.visibility="hidden";
+            imagen6.style.visibility="hidden";
+            estado.value="";
+            usadas.value="";
+				peli=Math.round(Math.random()*19)+1;
+            n=peliculas[peli].length;
+            for(i=0; i<n; i++)
+            	if (peliculas[peli].charAt(i)==" ")
+               	estado.value=estado.value + " ";
+               else
+            		estado.value=estado.value + "#";
+	    letra.focus();   
+         }
+
+      	function inicio()
+         {
+         	peliculas[1] = "La Guerra de las Galaxias La Amenaza Fantasma"
+				peliculas[2] = "La Guerra de las Galaxias El Ataque de los Clones"
+				peliculas[3] = "La Guerra de las Galaxias Una Nueva Esperanza"
+				peliculas[4] = "La Guerra de las Galaxias El Imperio Contraataca"
+				peliculas[5] = "La Guerra de las Galaxias El Retorno del Jedi"
+				peliculas[6] = "Alien El Octavo Pasajero"
+				peliculas[7] = "Aliens El Regreso"
+				peliculas[8] = "Gangs of New York"
+				peliculas[9] = "Alien 4 Resurreccion"
+				peliculas[10] = "Pulp Fiction"
+				peliculas[11] = "Deep Blue Sea"
+				peliculas[12] = "El Señor de los Anillos Las Dos Torres"
+				peliculas[13] = "El Señor de los Anillos El Retorno Del Rey"
+				peliculas[14] = "Alguien Volo Sobre el Nido del Cuco"
+				peliculas[15] = "El Señor de los Anillos La Comunidad del Anillo"
+				peliculas[16] = "Los Vengadores"
+				peliculas[17] = "Austin Powers"
+				peliculas[18] = "Todo Sobre mi Madre"
+				peliculas[19] = "Hable con Ella"
+				peliculas[20] = "Cadena de Favores"
+            reiniciar();
+         }
+
+      	function comprobar()
+         {
+         	var ok=false;
+            var fin=true;
+            var i;
+            var anterior;
+            if (letra.value!="")
+            {
+            	anterior=estado.value;
+            	estado.value="";
+         		for(i=0; i<n; i++)
+            		if(peliculas[peli].charAt(i).toUpperCase()==letra.value.toUpperCase())
+                  {
+                  	ok=true;
+                     estado.value=estado.value + peliculas[peli].charAt(i);
+                  }
+                  else
+                  	estado.value=estado.value + anterior.charAt(i);
+               usadas.value=usadas.value + letra.value + " ";
+               if (!ok)
+               {
+               	fallos++;
+                  switch (fallos)
+                  {
+                  	case 1:
+                     	imagen0.style.visibility="hidden";
+                     	imagen1.style.visibility="visible";
+                        break;
+                     case 2:
+                     	imagen1.style.visibility="hidden";
+                     	imagen2.style.visibility="visible";
+                        break;
+                     case 3:
+                     	imagen2.style.visibility="hidden";
+                     	imagen3.style.visibility="visible";
+                        break;
+                     case 4:
+                     	imagen3.style.visibility="hidden";
+                     	imagen4.style.visibility="visible";
+                        break;
+                     case 5:
+                     	imagen4.style.visibility="hidden";
+                     	imagen5.style.visibility="visible";
+                        break;
+                     case 6:
+                     	imagen5.style.visibility="hidden";
+                     	imagen6.style.visibility="visible";
+                        if (confirm("Lo siento. Has perdido. ¿Otra partida?"))
+                        	reiniciar();
+                        else
+                        {
+				alert("Autor: Eduardo García Alegre. Mail:soyeledu@hotmail.com - soyeledu@yahoo.es"); 
+               			close();
+	       		}
+                  }
+               }
+            }
+            i=0;
+            while (i<n && fin)
+            	if(estado.value.charAt(i)=="#")
+               	fin=false;
+               else
+               	i++;
+            if (fin)
+               if (confirm("Enhorabuena. Has ganado. ¿Otra partida?"))
+               	reiniciar();
+               else
+	       {
+		alert("Autor: Eduardo García Alegre. Mail:soyeledu@hotmail.com - soyeledu@yahoo.es"); 
+               	close();
+	       }
+            letra.value="";
+            letra.focus();
+         }
+      </SCRIPT>
+   </HEAD>
+   <BODY bgcolor="yellow" text="red" onLoad="inicio();">
+   	<IMG src="aho1.gif" border="5" height="390" width="390" style="position:absolute; left:370" name="imagen0">
+      <IMG src="aho2.gif" border="5" height="390" width="390" style="position:absolute; left:370; visibility:hidden" name="imagen1">
+      <IMG src="aho3.gif" border="5" height="390" width="390" style="position:absolute; left:370; visibility:hidden" name="imagen2">
+      <IMG src="aho4.gif" border="5" height="390" width="390" style="position:absolute; left:370; visibility:hidden" name="imagen3">
+      <IMG src="aho5.gif" border="5" height="390" width="390" style="position:absolute; left:370; visibility:hidden" name="imagen4">
+      <IMG src="aho6.gif" border="5" height="390" width="390" style="position:absolute; left:370; visibility:hidden" name="imagen5">
+      <IMG src="aho7.gif" border="5" height="390" width="390" style="position:absolute; left:370; visibility:hidden" name="imagen6">
+      <B>Adivina el nombre de la película<BR>
+      <BR><INPUT type="text" name="estado" size="45"><BR>
+      <BR><BR>Introduce letra<BR>
+      <BR><INPUT type="text" name="letra" size="1"><BR>
+      <BR><BR>Letras usadas<BR></B>
+      <BR><INPUT type="text" name="usadas" size="30"><BR>
+      <BR><BR><INPUT type="button" value="Comprobar" onclick="comprobar();"><BR>
+      <BR><BR><INPUT type="button" value="Reiniciar" onclick="reiniciar();"><BR>
+   </BODY>
+</HTML>
