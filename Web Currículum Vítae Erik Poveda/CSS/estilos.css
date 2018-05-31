@@ -1,0 +1,410 @@
+/*BODY*/
+
+
+
+@keyframes cambia_color {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: red;}
+}
+body{
+
+background-color: grey;
+animation-name: cambia_color;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+animation-duration: 10s;
+}
+
+
+}
+
+
+@keyframes nombre {
+    from {left: 0, top:0;, opacity: 0;}
+    to {left: 5%;, top:75%;, opacity: 1;}
+}
+
+
+#nombre{
+	position:absolute;
+	top:75%;
+	left: 5%;
+	color:white;
+	font-size: 40px;
+	text-shadow: 4px 4px 4px black;
+	animation: nombre 5s;
+	transition: 
+
+}
+
+
+/*ASIDE*/
+h2>img{
+	width: 30px;
+	height: 30px;
+	margin-right: 20px;
+	
+
+}
+
+li>img{
+	width: 20px;
+	height: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+ul>li{
+	list-style:none;
+}
+
+@keyframes cambia_color_2 {
+    0%   {background-color: white;}
+    25%  {background-color: grey;}
+    50%  {background-color: lightblue;}
+    100% {background-color: white;}
+}
+
+aside{
+	float:left;
+	width: 28%;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 10px 10px 10px 10px;
+	margin-left: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	animation-name: cambia_color_2;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+animation-duration: 10s;
+
+
+
+	
+}
+
+aside>div{
+	position:relative;
+}
+
+@keyframes imagen {
+    from {width: 0%;}
+    to {width: 100%;}
+}
+
+aside>div>img{
+	width: 100%;
+	border-radius: 10px 10px 10px 10px;
+	margin-top: 10px;
+	
+}
+
+
+#imagen01{	
+	animation: imagen 5s;
+
+
+}
+
+
+div.barra{
+	width: 100%;
+	background-color: grey;
+	border-radius: 20px 20px 20px 20px;
+
+}
+
+#verde01{
+	width: 90%;
+	background-color: lightgreen;
+	border-radius: 20px 20px 20px 20px;
+	text-align: center;
+	
+}
+
+
+
+@keyframes progreso {
+    0% {
+        width: 0;
+    }
+    90% {
+        width: 90%;
+    }
+}
+
+#verde01 {
+    animation: progreso 5s;
+}
+
+
+
+
+#verde02{
+	width: 70%;
+	background-color: lightgreen;
+	border-radius: 20px 20px 20px 20px;
+	text-align: center;
+}
+
+@keyframes progreso_dos {
+    0% {
+        width: 0;
+    }
+    70% {
+        width: 70%;
+    }
+}
+
+#verde02 {
+    animation: progreso_dos 5s;
+}
+
+#verde03{
+	width: 50%;
+	background-color: lightgreen;
+	border-radius: 20px 20px 20px 20px;
+	text-align: center;
+}
+
+@keyframes progreso_tres {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 50%;
+    }
+}
+
+#verde03 {
+    animation: progreso_tres 5s;
+}
+
+#verde01_1{
+	width: 100%;
+	background-color: lightgreen;
+	border-radius: 20px 20px 20px 20px;
+	text-align: center;
+}
+@keyframes progreso_uno_uno {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+#verde01_1 {
+    animation: progreso_uno_uno 5s;
+}
+
+#verde02_2{
+	width: 80%;
+	background-color: lightgreen;
+	border-radius: 20px 20px 20px 20px;
+	text-align: center;
+}
+
+@keyframes progreso_dos_dos {
+    0% {
+        width: 0;
+    }
+    80% {
+        width: 80%;
+    }
+}
+
+#verde02_2 {
+    animation: progreso_dos_dos 5s;
+}
+
+#verde03_3{
+	width: 50%;
+	background-color: lightgreen;
+	border-radius: 20px 20px 20px 20px;
+	text-align: center;
+}
+
+@keyframes progreso_tres_tres {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 50%;
+    }
+}
+
+#verde03_3 {
+    animation: progreso_tres_tres 5s;
+}
+
+#verde04_4{
+	width: 30%;
+	background-color: lightgreen;
+	border-radius: 20px 20px 20px 20px;
+	text-align: center;
+}
+
+@keyframes progreso_cuatro_cuatro {
+    0% {
+        width: 0;
+    }
+    30% {
+        width: 30%;
+    }
+}
+
+#verde04_4 {
+    animation: progreso_cuatro_cuatro 5s;
+}
+/*CONTENIDO*/
+
+
+.contenido{
+	width: 68%;
+	float:left;
+
+	
+
+}
+@keyframes cambia_color_3 {
+    0%   {background-color: white;}
+    25%  {background-color: grey;}
+    50%  {background-color: lightblue;}
+    100% {background-color: white;}
+}
+#trabajo{
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 10px 10px 10px 10px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	animation-name: cambia_color_3;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+animation-duration: 10s;
+}
+
+#educacion{
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 10px 10px 10px 10px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	animation-name: cambia_color_3;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+animation-duration: 10s;
+}
+
+#voluntariado{
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 10px 10px 10px 10px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	animation-name: cambia_color_3;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+animation-duration: 10s;
+}
+
+article{
+	margin-bottom: 50px;
+	border-bottom: 2px solid black;
+}
+
+h1{
+	color: white;
+    text-shadow: 1px 2px 4px #000000;
+}
+
+h2{
+	color: lightgreen;
+    text-shadow: 1px 2px 4px #000000;
+}
+.fecha{
+	color:green;
+	
+}
+
+span>img{
+
+	width: 20px;
+	margin-right: 10px;
+}
+
+/*FOOTER*/
+
+footer{
+	float: left;
+	background-color: green;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+
+	
+
+}
+
+.redes{
+	width: 35px;
+	background-color: lightgreen;
+	opacity: 0.5;
+	margin-right: 15px;
+	border-radius: 10px 10px 10px 10px;
+
+	
+
+}
+
+.redes:hover{
+	opacity:1;
+}
+
+/*media query*/
+@media screen and (max-width: 600px), {
+    body>aside {
+    	width: 100%;
+      
+    }
+    .contenido{
+	width: 100%;
+    }
+ 
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    body {
+     
+    }
+}
+
+@media screen and (min-width: 801px) {
+    
+    body{
+    	overflow: hidden;
+    }
+
+    #datos{width: 100%;}
+    #habilidades{width: 100%;}
+    #idiomas{width: 100%;
+    	float: left;}
+
+    .contenido{
+	width: 60%;
+	float: left;
+    }
+       aside>img{
+	width: 100%;
+       }
+}

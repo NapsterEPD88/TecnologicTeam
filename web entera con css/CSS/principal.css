@@ -1,0 +1,176 @@
+
+/*body*/
+
+body{
+	border-radius: 20px 20px 20px 20px;
+	width: 80%;
+	margin:0 auto;
+	background: grey;
+
+}
+
+
+body>div{
+	position: relative;
+	
+}
+
+body>div>header {
+	background: url("../img/cabecera.jpg");
+	margin-bottom: 0px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-radius: 20px 20px 0px 0px;
+	box-shadow: 10px 10px;
+	
+
+}
+
+nav>ul>li{
+	display: inline;
+	color:white;
+	background: lightblue;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+
+}
+
+header>div {
+	margin-left: 75%;
+	padding-bottom: 20px;
+}
+
+nav>ul{
+	background: blue;
+	margin-top: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 0px 0px 20px 20px;
+	box-shadow: 10px 10px;
+	
+}
+
+nav>ul>li:hover{
+	display: inline;
+	
+	background: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+
+}
+
+header>h1>a {
+	color:white;
+	margin-left: 20px;
+	float: left;
+
+}
+
+nav>ul>li>a{
+	color:white;
+	text-decoration:none;
+
+
+}
+
+nav>ul>li>a:hover{
+	color:orange;
+	text-decoration:none;
+
+
+}
+
+
+/*section*/
+
+
+section {
+	float: left;
+	margin-right: 20%;
+
+	
+}
+
+section>article{
+	background: linear-gradient(blue, white);;
+	padding-bottom: 45px;
+
+}
+
+section>article>h2{
+	background: lightblue;
+}
+
+section>article>h2>a{
+	color:blue;
+}
+
+section>article>p>span{
+	color:lightblue;
+}
+
+section>article>p>span>a{
+	color:lightblue;
+}
+
+
+/*aside*/
+
+aside{
+	background: lightblue;
+	
+	left: 80%;
+	position: absolute;
+	top:22%;
+	/*padding-bottom: 40.19px;*/
+	overflow: hidden;
+	padding-right: 10%;
+	border-radius: 0px 20px 20px 0px;
+	padding-bottom: 10.2px;
+
+}
+
+
+
+aside>h3{
+	background: blue;
+	
+
+}
+
+aside>h3>a {
+	color:white;
+
+}
+
+aside>h3 {
+	color:white;
+}
+
+aside>div>img{
+
+	float: left;
+	width: 60px;
+}
+
+aside>ul>li:hover{
+background: white;
+list-style-image: url('../img/icono_elemento_seleccionado.gif');
+}
+
+aside>ul>li{
+
+list-style-image: url('../img/icono_elemento.gif');
+}
+
+
+
+footer{
+	background-color: white;
+	border-radius: 20px 20px 20px 20px;
+	padding-left: 20px;
+	box-shadow: 10px 10px;
+}
+
