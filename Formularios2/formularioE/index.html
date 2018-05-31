@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <form id="form"action="#" method="post">
+            <div id="izquierda">
+            <fieldset>
+                
+                <legend>Datos Personales</legend>
+                <div>
+                    <input type="text" name="first_name" placeholder="Nombre"/ pattern="^[\s\S]{3,20}$" title="debes introducir un nombre entre 3 y 20 carácteres" required>
+                </div>
+                <div>
+                    <input type="text" name="last_name" placeholder="Apellidos" pattern="^[\s\S]{6,40}$" title="debes introducir un apellido entre 6 y 40 carácteres" required />
+                </div>
+                <div>
+                    <input type="number" name="quantity" min="18" max="70" placeholder="Edad" autocomplete="off" title="Edad permitida de 18 a 70 años">
+                </div>
+
+                 <span class="tercio">
+                    <label for="provincia">Estado civil</label>
+      <select id="provincia" name="provincia">
+       
+        <option value="estado1">Soltero</option>
+        <option value="estado2">Casado</option>
+        <option value="estado3">Divorciado</option>
+      </select>
+      
+    </span><br><br>
+</fieldset>
+    <fieldset>
+    <legend>Domicilio</legend>
+                <div>
+                    <input type="text" name="address" placeholder="Dirección" title="introduce tu dirección" />
+                </div>
+                 <div>
+                    <input type="text" name="mailcode" placeholder="Código Postal"/ pattern="^(?:0?[1-9]|[1-4]\d|5[0-2])\d{3}$" title="debes introducir 5 digitos" required>
+                </div>
+                <div>
+                    <input type="text" name="address" placeholder="Ciudad" title="introduce tu ciudad" required/>
+                </div>
+                <div>
+                    <input type="text" name="address" placeholder="Móvil" title="introduce tu número de teléfono" required/>
+                </div>
+                
+      </fieldset>
+  </div>
+      <div id="derecha">
+      <fieldset>
+          <legend>Formación Academica</legend>
+          <div>
+                    <input type="radio" name="title" value="Graduado">Graduado Escolar <input type="radio" name="title" value="Bachiller">Bachillerato
+                    <input type="radio" name="title" value="Universidad">Título universitario
+                </div>
+      </fieldset>
+      <fieldset>
+          <legend>Idiomas</legend>
+          <div>
+                    <input list="idiomas" name="idiomas">
+  <datalist id="idiomas">
+    <option value="Aleman">
+    <option value="Chino">
+    <option value="Francés">
+    <option value="Inglés">
+    <option value="Italiano">
+    <option value="Rumano">
+        <option value="Ruso">
+  </datalist>
+   <select id="idioma" name="idioma">
+       
+        <option value="idioma1">Bajo</option>
+        <option value="idioma2">Medio</option>
+        <option value="idioma3">Alto</option>
+      </select>
+                </div>
+                 <div>
+                   <input list="idiomas" name="idiomas">
+  <datalist id="idiomas">
+    <option value="Aleman">
+    <option value="Chino">
+    <option value="Francés">
+    <option value="Inglés">
+    <option value="Italiano">
+    <option value="Rumano">
+        <option value="Ruso">
+  </datalist>
+  <select id="idioma" name="idioma">
+       
+        <option value="idioma1">Bajo</option>
+        <option value="idioma2">Medio</option>
+        <option value="idioma3">Alto</option>
+      </select>
+                </div>
+                 <div>
+                   <input list="idiomas" name="idiomas">
+  <datalist id="idiomas">
+    <option value="Aleman">
+    <option value="Chino">
+    <option value="Francés">
+    <option value="Inglés">
+    <option value="Italiano">
+        
+    <option value="Rumano">
+        <option value="Ruso">
+  </datalist>
+  <select id="idioma" name="idioma">
+       
+        <option value="idioma1">Bajo</option>
+        <option value="idioma2">Medio</option>
+        <option value="idioma3">Alto</option>
+      </select>
+                </div>
+      </fieldset>
+   <fieldset>
+    <legend>Área de interés</legend>
+
+                    
+<input type="checkbox" name="hobby" value="Mantenimiento">Mantenimiento<br> 
+<input type="checkbox" name="hobby" value="Administración">Administración<br>
+<input type="checkbox" name="hobby" value="Servicios">Servicios<br>    
+</div><br>
+</fieldset>
+<fieldset>
+    <legend>Sucursales de Interés</legend>
+<select name="sucursales" size="4" multiple>
+    <option value="Madrid">Madrid</option>
+    <option value="Barcelona">Barcelona</option>
+    <option value="Castellón">Castellón</option>
+    <option value="Valencia">Valencia</option>
+    <option value="Tarragona">Tarragona</option>
+    <option value="Sevilla">Sevilla</option>
+    <option value="Bilbao">Bilbao</option>s
+  </select>
+  <br><br>
+</fieldset>
+<div>
+    
+    <div>
+                    <div class="small">Observaciones:</div>
+                    <textarea class="textarea" name="message" placeholder="Mensaje" rows="4" cols="40"></textarea>
+                </div>    
+
+
+                <input type="submit" name="submit" value="Envíar"/>
+                <input type="reset" value="Borrar">
+                
+
+            </fieldset>   
+        </form>
+    </div>
+</body>
+</html>

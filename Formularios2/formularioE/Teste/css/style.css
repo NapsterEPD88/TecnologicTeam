@@ -1,0 +1,15 @@
+div{
+	border: 1px solid black;
+	overflow: hidden;
+}
+div:last-of-type>p{
+	opacity: 0;
+	position: relative;
+	top: 50px;
+	transition: 1s;
+}
+div:last-of-type>button:hover~p{
+	opacity:1;
+	top:0;
+
+}

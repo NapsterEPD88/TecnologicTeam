@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="css/formulario2.css">
+</head>
+ 
+<body>
+<div id="contenedor">
+ 
+<h1>Formulario de registro</h1>
+ 
+<form method="post" action="#">
+<ul>
+<li>
+  <label class="titulo" for="nombre">Nombre y apellidos</label>
+  
+  <div class="controles">
+    <span class="completo">
+      <input id="nombre" name="nombre" value="" />
+      <label for="nombre">Nombre</label>
+    </span>
+ 
+    <span class="completo">
+      <input id="apellido1" name="apellido1" value="" />
+      <label for="apellido1">Primer apellido</label>
+    </span>
+ 
+    <span class="completo">
+      <input id="apellido2" name="apellido2" value="" />
+      <label for="apellido2">Segundo apellido</label>
+    </span>
+  </div>
+</li>
+ 
+<li>
+  <label class="titulo" for="direccion">Dirección</label>
+ 
+  <div class="controles">
+    <span class="completo">
+      <input id="direccion" name="direccion" value="" />
+      <label for="direccion">Calle, número, piso, puerta</label>
+    </span>
+ 
+    <span class="tercio">
+      <input id="codigopostal" name="codigopostal" value="" />
+      <label for="codigopostal">Código postal</label>
+    </span>
+ 
+    <span class="dostercios">
+      <input id="municipio" name="municipio" value="" />
+      <label for="municipio">Municipio</label>
+    </span>
+ 
+    <span class="tercio">
+      <select id="provincia" name="provincia">
+        <option value=""></option>
+        <option value="provincia1">Provincia 1</option>
+        <option value="provincia2">Provincia 2</option>
+        <option value="provincia3">Provincia 3</option>
+      </select>
+      <label for="provincia">Provincia</label>
+    </span>
+ 
+    <span class="dostercios">
+      <select id="pais" name="pais">
+        <option value=""></option>
+        <option value="pais1">País 1</option>
+        <option value="pais2">País 2</option>
+        <option value="pais3">País 3</option>
+      </select>
+      <label for="pais">País</label>
+    </span>
+  </div>
+</li>
+ 
+<li>
+  <label class="titulo" for="email">Email</label>
+ 
+  <div class="controles">
+    <span class="completo">
+      <input id="email" name="email" value="" />
+    </span>
+  </div>
+</li>
+ 
+<li>
+  <label class="titulo" for="telefonofijo">Teléfono</label>
+ 
+  <div class="controles">
+    <span class="mitad">
+      <input id="telefonofijo" name="telefonofijo" value="" />
+      <label for="telefonofijo">Fijo</label>
+    </span>
+ 
+    <span class="mitad">
+      <input id="telefonomovil" name="telefonomovil" value="" />
+      <label for="telefonomovil">Móvil</label>
+    </span>
+  </div>
+</li>
+ 
+<li class="botones">
+  <input id="alta" type="submit" value="Registrarse" />
+</li>
+ 
+</ul>
+</form>
+ 
+</div>
+</body>
+</html>
+
+
+

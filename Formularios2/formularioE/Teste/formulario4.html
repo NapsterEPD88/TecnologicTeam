@@ -1,0 +1,43 @@
+  
+<!DOCTYPE html>  
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="css/formulario4.css">
+</head>
+<body>  
+    <form  class="contact" action="#" id="form_contact" >  
+         
+            <ul>  
+                <li>  
+                    <h2>Contactos</h2>  
+                    <span class="notification">* Datos requeridos</span>  
+                </li>  
+                <li>  
+                    <label for="name">Nombre:</label>  
+                    <input type="text" placeholder="Marco Polo" required />  
+                </li>  
+                <li>  
+                    <label for="email">Email:</label>  
+                    <input type="email" name="email" placeholder="info@modelo.com" required />  
+                    <span class="form">Formato correcto: "name@something.com"</span>  
+                </li>  
+                <li>  
+                    <label for="website">Sitio web:</label>  
+                    <input type="url" name="website" placeholder="http://modelo.com" required pattern="(http|https)://.+" />  
+                    <span class="form">Formato correcto: "http://modelo.com"</span>  
+                </li>  
+                <li>  
+                    <label for="message">Mensaje:</label>  
+                    <textarea name="message" cols="40" rows="6" required></textarea>  
+                </li>  
+                <li>  
+                    <button class="submit" type="submit">Enviar mensaje</button>  
+                </li>  
+            </ul>  
+         
+    </form>  
+</body>  
+</html>  

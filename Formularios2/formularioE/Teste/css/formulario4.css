@@ -1,0 +1,202 @@
+/* === Remove input autofocus webkit === */  
+*:focus {  
+    outline: none;  
+}  
+  
+/* === Form Typography === */  
+body {  
+    font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;  
+    margin-left: 25%;
+    background:#e6ffff; 
+}  
+  
+.contact h2, .contact label {  
+    font-family: Georgia, Times, "Times New Roman", serif;  
+}  
+  
+.form,.notification {  
+    font-size: 11px;  
+}  
+  
+/* === List Styles === */  
+.contact ul {  
+    width: 750px;  
+    list-style-type: none;  
+    list-style-position: outside;  
+    margin: 0px;  
+    padding: 0px;  
+}  
+  
+.contact li {  
+    padding: 12px;  
+    border-bottom: 1px solid #eee;  
+    position: relative;  
+}  
+  
+.contact li:first-child, .contact li:last-child {  
+        border-bottom: 1px solid #777;  
+    }  
+  
+/* === Form Header === */  
+.contact h2 {  
+    margin: 0;  
+    display: inline;  
+}  
+  
+.notification {  
+    color: #d45252;  
+    margin: 5px 0 0 0;  
+    display: inline;  
+    float: right;  
+}  
+  
+/* === Form Elements === */  
+.contact label {  
+    width: 150px;  
+    margin-top: 3px;  
+    display: inline-block;  
+    float: left;  
+    padding: 3px;  
+}  
+  
+.contact input {  
+    height: 20px;  
+    width: 220px;  
+    padding: 5px 8px;  
+}  
+  
+.contact textarea {  
+    padding: 8px;  
+    width: 300px;
+    height: 150px;  
+}  
+  
+.contact button {  
+    margin-left: 156px;  
+}  
+  
+/* form element visual styles */  
+.contact input, .contact textarea {  
+    border: 1px solid #aaa;  
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;  
+    border-radius: 2px;  
+    padding-right: 30px;  
+    -moz-transition: padding .25s;  
+    -webkit-transition: padding .25s;  
+    -o-transition: padding .25s;  
+    transition: padding .25s;  
+}  
+  
+.contact input:focus, .contact textarea:focus {  
+        background: #fff;  
+        border: 1px solid #555;  
+        box-shadow: 0 0 3px #aaa;  
+        padding-right: 70px;  
+    }  
+  
+    /* === HTML5 validation styles === */  
+.contact input:required, .contact textarea:required {  
+        background: url(../img/red_asterisc.png);
+        background-size: 2em;  
+        background-repeat: no-repeat;
+        background-position:right center;   
+    }  
+  
+.contact input:required:valid, .contact textarea:required:valid {  
+        background: #fff url(../img/valid.png) ;  
+        box-shadow: 0 0 5px #5cd053;  
+        border-color: #28921f;
+        background-size: 2em;  
+        background-repeat: no-repeat;
+        background-position:right center;     
+        }  
+  
+.contact input:focus:invalid {  
+        background: #fff url(../img/invalid.jpg);  
+        box-shadow: 0 0 5px #d45252;  
+        border-color: #b03535;
+        background-size: 2em;  
+        background-repeat: no-repeat;
+        background-position:right center;     
+    }  
+.contact textarea:focus:invalid {  
+        background: #fff url(../img/image4.jpg);  
+        box-shadow: 0 0 5px #d45252;  
+        border-color: #b03535;
+        background-size: 10em;  
+        background-repeat: no-repeat;
+        background-position:right center;     
+    }  
+/* === Form hints === */  
+.form {  
+    background: #d45252;  
+    border-radius: 3px 3px 3px 3px;  
+    color: white;  
+    margin-left: 8px;  
+    padding: 1px 6px;  
+    z-index: 999; /* hints stay above all other elements */  
+    position: absolute; /* allows proper formatting if hint is two lines */  
+    display: none;  
+}  
+  
+.form::before {  
+        content: "\25C0";  
+        color: #d45252;  
+        position: absolute;  
+        top: 1px;  
+        left: -6px;  
+    }  
+  
+.contact input:focus + .form {  
+    display: inline;  
+}  
+  
+.contact input:required:valid + .form {  
+    background: #28921f;  
+}  
+  
+.contact input:required:valid + .form::before {  
+        color: #28921f;  
+    }  
+  
+/* === Button Style === */  
+button.submit {  
+    background-color: #68b12f;  
+    background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));  
+    background: -webkit-linear-gradient(top, #68b12f, #50911e);  
+    background: -moz-linear-gradient(top, #68b12f, #50911e);  
+    background: -ms-linear-gradient(top, #68b12f, #50911e);  
+    background: -o-linear-gradient(top, #68b12f, #50911e);  
+    background: linear-gradient(top, #68b12f, #50911e);  
+    border: 1px solid #509111;  
+    border-bottom: 1px solid #5b992b;  
+    border-radius: 3px;  
+    -webkit-border-radius: 3px;  
+    -moz-border-radius: 3px;  
+    -ms-border-radius: 3px;  
+    -o-border-radius: 3px;  
+    box-shadow: inset 0 1px 0 0 #9fd574;  
+    -webkit-box-shadow: 0 1px 0 0 #9fd574 inset;  
+    -moz-box-shadow: 0 1px 0 0 #9fd574 inset;  
+    -ms-box-shadow: 0 1px 0 0 #9fd574 inset;  
+    -o-box-shadow: 0 1px 0 0 #9fd574 inset;  
+    color: white;  
+    font-weight: bold;  
+    padding: 6px 20px;  
+    text-align: center;  
+    text-shadow: 0 -1px 0 #396715;  
+}  
+  
+button.submit:hover {  
+        opacity: .85;  
+        cursor: pointer;  
+    }  
+  
+button.submit:active {  
+        border: 1px solid #20911e;  
+        box-shadow: 0 0 10px 5px #356b0b inset;  
+        -webkit-box-shadow: 0 0 10px 5px #356b0b inset;  
+        -moz-box-shadow: 0 0 10px 5px #356b0b inset;  
+        -ms-box-shadow: 0 0 10px 5px #356b0b inset;  
+        -o-box-shadow: 0 0 10px 5px #356b0b inset;  
+    }  

@@ -1,0 +1,134 @@
+body {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  background: #AAA;
+}
+
+/* El contenedor define la zona principal de contenido */
+#contenedor {
+  background: #FFF;
+  margin: 1em auto;
+  padding: 1em;
+  width: 768px;
+}
+
+/* El formulario está definido como una lista */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  border-top: 1px solid #CCC;
+  margin: 1em 0;
+  padding: 1em;
+  width: auto;
+  overflow: hidden;
+}
+
+/* El formulario se organiza en dos columnas, el título y los controles */
+ul li label.titulo {
+  float: left;
+  width: 150px;
+  text-align: right;  
+}
+ 
+ul li div.controles {
+  margin-left: 160px;
+}
+
+/* El último elemento del formulario es el botón "Registrarse" */
+ul li.botones {
+  border-top: 2px solid #CCC;
+  clear: both;
+  float: none;
+  padding: 1em 0;
+  text-align: right;
+  width: 100%;
+}
+ 
+ul li.botones input {
+  font-size: 18px;
+}
+
+/* El título de los elementos de la lista */ 
+ul li label.titulo {
+  font-weight: bold;
+}
+ 
+ul li div span {
+  float: left;
+  padding: 0.3em 0;
+}
+ 
+ul li div span.completo {
+  width: 100%;
+}
+ 
+ul li div span.mitad {
+  width: 50%;
+}
+ 
+ul li div span.tercio {
+  width: 33%;
+}
+ 
+ul li div span.dostercios {
+  width: 66%;
+}
+
+/* Como se define display: block, se muestra en la línea siguiente */
+ul li div span label {
+  display: block;
+  font-size: 12px;
+  color: #333;
+}
+
+/* Configuración de los controles del formulario */
+ul li input {
+  padding: 0.2em;
+}
+ 
+input#apellido1, input#apellido2, input#direccion, input#email {
+  width: 260px;
+}
+ 
+input#codigopostal {
+  width: 80px;
+}
+ 
+select#provincia {
+  width: 90px;
+}
+ 
+select#pais {
+  width: 150px;
+}
+ 
+input#telefonofijo, input#telefonomovil {
+  width: 135px;
+}
+ 
+/* Cambia el color cuando se sitúa el cursor del ratón */
+ul li:hover {
+  background-color: #FF9;
+}
+ 
+ul li.botones:hover {
+  background-color: transparent;
+}
+
+/* Destaca el control cuando recibe el foco */
+ul li input, ul li select {
+  border: 2px solid transparent;
+  border-bottom: 2px solid black;
+}
+
+ul li.botones input {
+  border: 2px solid #CCC;
+}
+
+ul li input:focus, ul li select:focus {
+  border: 2px solid #F00;
+}

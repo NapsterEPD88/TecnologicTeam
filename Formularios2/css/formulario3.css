@@ -1,0 +1,111 @@
+
+   body{
+    background-image: url(../img/art.jpg); 
+   }
+    #wrapper {
+        width:450px;
+        margin:0 auto;
+        font-family:Verdana, sans-serif;
+    }
+    legend {
+        color:#0000ff;
+        font-size:16px;
+        padding:0 10px;
+        background:transparent;
+        padding:5px 10px;
+        text-transform:uppercase;
+        font-family:Helvetica, sans-serif;
+        font-weight:bold;
+    }
+    fieldset {
+        border:0;
+        background: transparent; 
+        padding:20px;
+        
+    }
+    input,
+    textarea {
+        color: #373737;
+        background: #fff;
+        border: 1px solid #CCCCCC;
+        color: #aaa;
+        font-size: 14px;
+        line-height: 1.2em;
+        margin-bottom:15px;
+        border-radius:4px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+    input[type="text"],
+    input[type="password"]{
+        padding: 8px 6px;
+        height: 22px;
+        width:280px;
+    }
+    input[type="number"]{
+        padding: 8px 6px;
+        height: 22px;
+        width:40px;
+
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus{
+        background:#f5fcfe;
+        text-indent: 0;
+        z-index: 1;
+        color: #373737;
+        width: 380px;
+        border-color:#ccc;
+        box-shadow:0 0 5px rgba(4, 129, 177, 0.5);
+        opacity:0.6;
+    }
+    input[type="number"]:focus
+    { background:#f5fcfe;
+        text-indent: 0;
+        z-index: 1;
+        color: #373737;
+        width: 60px;
+        border-color:#ccc;
+        box-shadow:0 0 5px rgba(4, 129, 177, 0.5);
+        opacity:0.6;
+    }
+    input[type="submit"]{
+        background: #222;
+        border: none;
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+        text-transform:uppercase;
+        color: #eee;
+        cursor: pointer;
+        font-size: 15px;
+        margin: 5px 0;
+        padding: 5px 22px;
+        border-radius: 4px;
+        box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+    }
+    fieldset>div.Sexo{
+        color:#00ff00;
+                
+    }
+    label[for=hombre],label[for=mujer]{
+    padding-left:0%;
+    display:inline; 
+}
+    textarea {
+        padding:3px;
+        width:96%;
+        height:100px;
+    }
+    textarea:focus {
+        background:#ebf8fd;
+        text-indent: 0;
+        z-index: 1;
+        color: black;
+        opacity:0.6;
+        box-shadow:0 0 5px rgba(4, 129, 177, 0.5);
+        border-color:#ccc;
+    }
+    .small {
+        line-height:14px;
+        font-size:12px;
+        color:#0000ff;
+        margin-bottom:3px;
+    }

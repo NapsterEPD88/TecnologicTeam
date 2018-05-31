@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<title>Formulario</title>
+	<link rel="stylesheet" type="text/css" href="css/formulario1.css">
+</head>
+<body>
+
+<form>
+	<label>Formulario:</label>
+	<br><br>
+	<fieldset>
+    <legend>Información Personal:</legend><br><br>
+	<label>Nombre:</label>
+  <input type="text" name="firstname" placeholder="Tú Nombre" autofocus required maxlength="20" autocomplete="off">
+  <br><br>
+  <label>Apellidos:</label>
+  <input type="text" name="lastname" placeholder ="Tus Apellidos" size="40" maxlength="100" required autocomplete="off">
+  <br><br>
+  <label>Edad:</label><input type="number" name="quantity" min="0" max="120" placeholder="Edad" autocomplete="off">
+  <br><br>
+  <label>Sexo:</label><input type="radio" name="gender" value="male"> Hombre <input type="radio" name="gender" value="female" checked> Mujer<br><br>
+  </fieldset>
+  <br><br><br>
+
+	<fieldset>
+		<legend>Datos Consulta:</legend><br><br>
+		<label>Área:</label>
+		<input list="area" name="area" required placeholder="Area de consulta" maxlength="40">
+  <datalist id="area">
+    <option value="Personal">
+    <option value="Selección">
+    <option value="Criticas">
+    <option value="Preguntas">
+  </datalist><br><br>
+		<label>Producto:</label><input type="text" name="producto" placeholder ="Nº Producto" required maxlength="100" autocomplete="off"><br><br>
+		<label>Motivo:</label><textarea name="message"  rows="10" cols="22" required autocomplete="off"> </textarea><br><br>
+	</fieldset><br><br>
+	<input type="submit" value="Enviar">
+</form>
+
+</body>
+</html>

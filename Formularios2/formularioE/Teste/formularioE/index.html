@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <form action="" method="post">
+            <fieldset>
+                <img src="img/formulario.png">
+                <legend>Formulario de Registro</legend>
+                <div>
+                    <input type="text" name="first_name" placeholder="Nombre"/>
+                </div>
+                <div>
+                    <input type="text" name="last_name" placeholder="Apellidos"/>
+                </div>
+                 <div>
+                    <input type="number" name="quantity" min="0" max="120" placeholder="Edad" autocomplete="off">
+                </div>
+
+                 <div>
+                    <input type="text" name="first_name" placeholder="Usuario"/>
+                </div>
+                <div>
+                    <input type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$" name="first_name" title="error: entre 6 y 15 carácteres, mínimo 1 letra mayuscula, 1 letra minuscula y 1 número" placeholder="Contraseña"/>
+                </div>
+               
+              
+                <div>
+                    <input type="text" name="email" placeholder="E-mail"/>
+                </div>
+                 <div>
+                    <input type="text" name="mailcode" placeholder="Código Postal"/ pattern="^[0-9]{5}$" title="error: debes introducir 5 digitos">
+                </div>
+                <div>
+                    <label>Sexo:</label><input type="radio" name="gender" value="male"> Hombre <input type="radio" name="gender" value="female" checked> Mujer
+                </div>
+                <div>
+                    <div class="small">Escriba cualquier comentario que desee que reciba:</div>
+                    <textarea name="message" placeholder="Mensaje"></textarea>
+                </div>    
+                <input type="submit" name="submit" value="Envíar"/>
+            </fieldset>    
+        </form>
+    </div>
+</body>
+</html>

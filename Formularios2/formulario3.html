@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="css/formulario3.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <form action="" method="post">
+            <fieldset>
+                <legend>Formulario de Registro</legend>
+                <div>
+                    <input type="text" name="first_name" placeholder=" Name"/>
+                </div>
+                <div>
+                    <input type="text" name="last_name" placeholder="Nickname"/>
+                </div>
+                <div>
+                  <input type="text" name="age" placeholder="Age" pattern="^(1[6-9])|([2-9][0-9])" >
+                </div>
+                <div>
+                  <input type="text" name="number" placeholder="Phone" pattern="^(679)[0-9]{8}">
+                  
+
+
+
+                </div>
+                <div>
+                  <input type="password" pattern="^(?=.*\[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,15}$" name="first_name" title="error: entre 6 y 15 carácteres, mínimo 1 letra mayuscula, 1 letra minuscula y 1 número" placeholder="Password"/>
+                </div>
+                <div>
+                    <input type="text" pattern="^([A-Za-z]+)[\w\-\.]{2,}@([\w]{3,}\.){1,2}[A-Za-z]{2,4}$" name="email" placeholder="Email"/>
+                </div>
+                <div>
+                    <input type="text" name="mailcode" placeholder="Código Postal"/ pattern="^([0-4][0-9]{4})|(5[0-2][0-9]{3}) " title="error: debes introducir 5 digitos">
+                </div>
+                <div class="Sexo">
+                     <label>Sexo:</label>
+                     <div class="male">
+                     <input type="radio" name="gender" value="male"> Male 
+                     </div>
+                     <div class="female">
+                     <input type="radio" name="gender" value="female" checked> Female
+                  </div>
+                </div>
+                <div>
+                    <div class="small">Write your message here please</div>
+                    <textarea name="message" placeholder="Message"></textarea>
+                </div>    
+                <input type="submit" name="submit" value="Flyng mesage"/>
+            </fieldset>    
+        </form>
+    </div>
+</body>
+</html>
