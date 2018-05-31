@@ -1,0 +1,107 @@
+
+
+body{
+  background-image:  url(../img/white_texture.jpg);
+}
+
+.container{
+    position: relative;
+    float: left;
+    width:30%;
+    height: 20%;
+    margin-left: 10%;
+
+    border: 8px solid white;
+ background-color: rgba(255, 194, 102, 1);
+ transition: transform 3s, width 3s, height 3s;
+ 
+ 
+}
+
+
+.textup {
+    background: black;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 5%;
+    
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    transition: transform 3s, width 3s, height 3s, ;
+    
+
+}
+
+.image {
+  opacity: 1;
+  display:block;
+  width: 100%;
+  height:0 auto;
+  transition: transform 3s, width 3s, height 3s, opacity 3s;
+ 
+ 
+}
+
+.middle {
+ 
+  /*transition: 3s ease;*/
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transition: transform 3s, width 3s, height 3s, opacity 3s;
+  
+}
+
+.pulsar{
+
+    /*position: absolute;*/
+    bottom: 10%
+    left: 80%;
+    background-color: black;
+    color: white;
+    font-size:10px;
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: transform 3s, width 3s, height 3s;
+}
+p {
+ 
+  text-align:left;
+  color: white;
+  font-size: 16px;
+  width:100%;
+  transition: transform 3s, width 3s, height 3s;
+
+}
+.container:hover .image {
+   opacity: 0.4;
+   background-color: rgba(255, 194, 102, 0.9);
+
+}
+
+.container:hover .middle {
+  opacity: 1;
+
+ 
+}
+
+.container:hover .textup {
+
+
+}
+
+div.container:hover, div>h1:hover, div>img:hover, div.middle:hover, div>p:hover, div>a:hover {
+  
+  width: 35%;
+  height: 35%;
+
+}

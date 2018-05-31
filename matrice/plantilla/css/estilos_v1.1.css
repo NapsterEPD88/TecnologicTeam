@@ -1,0 +1,138 @@
+/********************************/
+/***** Autor: Javi G. Nieto *****/
+/***** Versión 1.1	        *****/
+/********************************/
+
+/********** HEADER **************/
+header > img {
+	width: 100%;
+}
+header{
+	position:relative;
+	border-bottom:1px solid #333;
+}
+
+header > h1 {
+	position: absolute;
+	top:10%;
+	left:10%;
+	color:#EEE;
+}
+
+
+/************ MENÚ *************/
+nav {
+}
+
+ul{	
+	background:#666666;
+	list-style: none;
+	padding:0;
+	margin:0;
+	overflow:hidden;
+}
+
+
+li{
+	float:left;
+	margin:0;
+	padding:0.5em 1em;	
+}
+
+li.pulsado{
+	background-color:green;
+}
+
+li:hover,li.pulsado:hover{
+	background-color:red;	
+}
+
+
+li > a{
+	margin:0;
+	text-decoration: none;
+	color:#fff;	
+}
+
+
+
+/***** SECTION ********************/
+section,aside{
+	float:left;
+}
+
+section{
+	width:70%;
+	padding:0 1em;
+	box-sizing: border-box;
+
+}
+
+aside{
+	width:30%;
+}
+
+table,th,td{
+	border:1px solid white;
+}
+
+table{
+	background:black;
+	width:100%;
+	border-spacing: 4px;
+}
+th,td{
+	color:white;	
+}
+
+th{
+	background:aqua;
+}
+td{
+	text-align: center;
+}
+
+tr:nth-child(even){
+	background:#555;
+} 
+
+tr:nth-child(odd){
+	background:#ccc;
+} 
+
+caption{
+	font-size:1.5em;
+	font-weight: bold;
+}
+
+td>a{
+	display:inline-block;
+	width:100%;
+	text-decoration:none;
+}
+
+/***** FOOTER *************/
+footer{
+	background: lightblue;
+	padding: 0 1em;
+}
+
+footer > p {
+	color:#eee;
+	float:left;
+}
+
+footer > div#redes {
+	margin-top:0.5em;
+	float:right;
+}
+
+footer > div#redes > img {
+	width:2em;
+}
+
+
+/******* Clase genérica para Divs de rotura ****/
+.rotura{
+	clear:both;
+}

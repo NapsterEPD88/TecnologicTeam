@@ -1,0 +1,443 @@
+/********************************/
+/***** Autor: Javi G. Nieto *****/
+/***** Versión 1.1	        *****/
+/********************************/
+
+/********** HEADER **************/
+header > img {
+	width: 100%;
+}
+header{
+	position:relative;
+	border-bottom:1px solid #333;
+}
+
+header > h1 {
+	position: absolute;
+	top:10%;
+	left:10%;
+	color:#EEE;
+}
+
+
+/************ MENÚ *************/
+nav {
+}
+
+ul{	
+	background:#666666;
+	list-style: none;
+	padding:0;
+	margin:0;
+	overflow:hidden;
+}
+
+
+li{
+	float:left;
+	margin:0;
+	padding:0.5em 1em;	
+}
+
+li.pulsado{
+	background-color:green;
+}
+
+li:hover,li.pulsado:hover{
+	background-color:red;	
+}
+
+
+li > a{
+	margin:0;
+	text-decoration: none;
+	color:#fff;	
+}
+
+
+
+/***** SECTION ********************/
+section,aside{
+	float:left;
+}
+
+section{
+	width:70%;
+	padding:0 1em;
+	box-sizing: border-box;
+
+}
+
+aside{
+	width:30%;
+}
+
+table,th,td{
+	border:1px solid white;
+}
+
+table{
+	background:black;
+	width:100%;
+	border-spacing: 4px;
+}
+th,td{
+	color:white;	
+}
+
+th{
+	background:aqua;
+}
+td{
+	text-align: center;
+}
+
+tr:nth-child(even){
+	background:#555;
+} 
+
+tr:nth-child(odd){
+	background:#ccc;
+} 
+
+caption{
+	font-size:1.5em;
+	font-weight: bold;
+}
+
+td>a{
+	display:inline-block;
+	width:100%;
+	text-decoration:none;
+}
+
+/***** FOOTER *************/
+footer{
+	background: yellow;
+	padding: 0 1em;
+}
+
+footer > p {
+	color:#eee;
+	float:left;
+}
+
+footer > div#redes {
+	margin-top:0.5em;
+	float:right;
+}
+
+footer > div#redes > img {
+	width:2em;
+}
+
+
+/******* Clase genérica para Divs de rotura ****/
+.rotura{
+	clear:both;
+}
+/* 
+-------------------------------------------------------------------------
+CSS Selectors
+
+https://www.w3schools.com/cssref/css_selectors.asp
+
+In CSS, selectors are patterns used to select the element(s) you want to style.
+Use our CSS Selector Tester to demonstrate the different selectors.
+Selector
+Example
+Example description
+.class
+.intro
+Selects all elements with class="intro"
+#id
+#firstname
+Selects the element with id="firstname"
+*
+*
+Selects all elements
+element
+p
+Selects all <p> elements
+element,element
+div, p
+Selects all <div> elements and all <p> elements
+element element
+div p
+Selects all <p> elements inside <div> elements
+element>element
+div > p
+Selects all <p> elements where the parent is a <div> element
+element+element
+div + p
+Selects all <p> elements that are placed immediately after <div> elements
+element1~element2
+p ~ ul
+Selects every <ul> element that are preceded by a <p> element
+[attribute]
+[target]
+Selects all elements with a target attribute
+[attribute=value]
+[target=_blank]
+Selects all elements with target="_blank"
+[attribute~=value]
+[title~=flower]
+Selects all elements with a title attribute containing the word "flower"
+[attribute|=value]
+[lang|=en]
+Selects all elements with a lang attribute value starting with "en"
+[attribute^=value]
+a[href^="https"]
+Selects every <a> element whose href attribute value begins with "https"
+[attribute$=value]
+a[href$=".pdf"]
+Selects every <a> element whose href attribute value ends with ".pdf"
+[attribute*=value]
+a[href*="w3schools"]
+Selects every <a> element whose href attribute value contains the substring "w3schools"
+:active
+a:active
+Selects the active link
+::after
+p::after
+Insert something after the content of each <p> element
+::before
+p::before
+Insert something before the content of each <p> element
+:checked
+input:checked
+Selects every checked <input> element
+:disabled
+input:disabled
+Selects every disabled <input> element
+:empty
+p:empty
+Selects every <p> element that has no children (including text nodes)
+:enabled
+input:enabled
+Selects every enabled <input> element
+
+:first-child
+p:first-child
+Selects every <p> element that is the first child of its parent
+Ex
+!DOCTYPE html>
+<html>
+<head>
+<style>
+p:first-child {
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+
+<p>This paragraph is the first child of its parent (body).</p>
+
+<h1>Welcome to My Homepage</h1>
+<p>This paragraph is not the first child of its parent.</p>
+
+<div>
+  <p>This paragraph is the first child of its parent (div).</p>
+  <p>This paragraph is not the first child of its parent.</p>
+</div>
+
+<p><b>Note:</b> For :first-child to work in IE8 and earlier, a DOCTYPE must be declared.</p>
+
+</body>
+</html>
+
+::first-letter
+p::first-letter
+Selects the first letter of every <p> element
+::first-line
+p::first-line
+Selects the first line of every <p> element
+:first-of-type
+p:first-of-type
+Selects every <p> element that is the first <p> element of its parent
+:focus
+input:focus
+Selects the input element which has focus
+:hover
+a:hover
+Selects links on mouse over
+:in-range
+input:in-range
+Selects input elements with a value within a specified range
+:invalid
+input:invalid
+Selects all input elements with an invalid value
+:lang(language)
+p:lang(it)
+Selects every <p> element with a lang attribute equal to "it" (Italian)
+:last-child
+p:last-child
+Selects every <p> element that is the last child of its parent
+:last-of-type
+p:last-of-type
+Selects every <p> element that is the last <p> element of its parent
+:link
+a:link
+Selects all unvisited links
+:not(selector)
+:not(p)
+Selects every element that is not a <p> element
+:nth-child(n)
+p:nth-child(2)
+Selects every <p> element that is the second child of its parent
+:nth-last-child(n)
+
+p:nth-last-child(2)
+Selects every <p> element that is the second child of its parent, counting from the last child
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+p:nth-last-child(2) {
+    background: red;
+} 
+</style>
+</head>
+<body>
+
+<p>The first paragraph.</p>
+<p>The second paragraph.</p>
+<p>The third paragraph.</p>
+<p>The fourth paragraph.</p>
+
+<p><b>Note:</b> Internet Explorer 8 and earlier versions do not support the :nth-last-child() selector.</p>
+
+</body>
+</html>
+
+:nth-last-of-type(n)
+p:nth-last-of-type(2)
+Selects every <p> element that is the second <p> element of its parent, counting from the last child
+:nth-of-type(n)
+p:nth-of-type(2)
+Selects every <p> element that is the second <p> element of its parent
+:only-of-type
+p:only-of-type
+Selects every <p> element that is the only <p> element of its parent
+:only-child
+p:only-child
+Selects every <p> element that is the only child of its parent
+:optional
+input:optional
+Selects input elements with no "required" attribute
+:out-of-range
+input:out-of-range
+Selects input elements with a value outside a specified range
+:read-only
+input:read-only
+Selects input elements with the "readonly" attribute specified
+:read-write
+input:read-write
+Selects input elements with the "readonly" attribute NOT specified
+:required
+input:required
+Selects input elements with the "required" attribute specified
+:root
+:root
+Selects the document's root element
+::selection
+::selection
+Selects the portion of an element that is selected by a user
+:target
+#news:target 
+Selects the current active #news element (clicked on a URL containing that anchor name)
+:valid
+input:valid
+Selects all input elements with a valid value
+:visited
+a:visited
+Selects all visited links
+
+------------------------------------------------------------------------------------------
+******************************************************************************************
+
+CSS Opacity / Transparency
+   https://www.w3schools.com/css/css_image_transparency.asp
+
+Transparent Hover Effect
+ 
+  https://www.w3schools.com/css/tryit.asp?filename=trycss_image_transparency
+  https://www.w3schools.com/css/tryit.asp?filename=trycss_image_transparency2
+  
+Transparent Box
+ 
+  https://www.w3schools.com/css/tryit.asp?filename=trycss_opacity_box
+ 
+En RGBA
+  https://www.w3schools.com/css/tryit.asp?filename=trycss_opacity_box2
+
+Text in Transparent Box
+  https://www.w3schools.com/css/tryit.asp?filename=trycss_transparency
+
+------------------------------------------------------------------------------------ 
+************************************************************************************
+
+CSS Shadow Effects
+https://www.w3schools.com/css/css3_shadows.asp
+
+CSS Shadow Effects
+CSS Shadow Effects
+   https://www.w3schools.com/css/tryit.asp?filename=trycss3_text-shadow1
+   https://www.w3schools.com/css/tryit.asp?filename=trycss3_box-shadow
+
+Multiple Shadows
+  https://www.w3schools.com/css/tryit.asp?filename=trycss3_text-shadow6
+  https://www.w3schools.com/css/tryit.asp?filename=trycss3_text-shadow_border
+
+ Border around text!
+      Example
+        h1 {
+           color: yellow;
+           text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+         } 
+
+CSS box-shadow Property
+  https://www.w3schools.com/css/tryit.asp?filename=trycss3_box-shadow
+  https://www.w3schools.com/css/tryit.asp?filename=trycss3_box-shadow
+  
+  add a blur effect to the shadow:
+  https://www.w3schools.com/css/tryit.asp?filename=trycss3_box-shadow3
+
+You can also add shadows to the ::before and ::after pseudo-elements, 
+to create an interesting effect:
+
+  https://www.w3schools.com/css/tryit.asp?filename=trycss3_box-shadow6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
