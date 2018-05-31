@@ -1,0 +1,60 @@
+<html>
+<head>
+</head>
+<style>
+#pantalla { 
+	height: 45%;
+	width: 60%;
+	border: 2px solid red;
+background: url("img/f01.png") repeat-x bottom,
+url("img/f02.png") no-repeat center bottom,
+url("img/f03.png") repeat-x center top;
+background-color: lightblue;
+
+
+}
+
+#consola {
+	position: relative;
+	background-color: black;
+	width: 60%;
+	margin:0 auto;
+}
+img {
+	width: 100%;
+}
+
+#pantalla2 {
+	position: absolute;
+	top: 10%;
+	left: 23%;
+	height: 25%;
+	width: 56%;
+	
+	background-color: blue;
+
+}
+
+#suelo {
+	height: 20px;
+
+	
+}
+</style>
+
+<body>
+
+<div id="consola"><img src="img/gameboy.jpg">
+<div id="pantalla2">
+	<img id="cielo" src="img/f03.png">
+	<img id="mario" src="img/f02.png">
+	<img id="suelo" src="img/f01.png">
+</div>
+<div id="pantalla">  </div>
+</div>
+
+
+
+
+</body>
+</html>

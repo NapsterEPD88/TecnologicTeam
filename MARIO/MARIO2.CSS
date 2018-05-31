@@ -1,0 +1,19 @@
+div { 
+background-image: url(img/fO1.png);
+background-repeat: repeat-x;
+background-position: left top;
+
+ }
+div {
+
+background-image: url(img/f02.png);
+background-repeat: no-repeat;
+background-position: right top;
+}
+
+div {
+
+background-position: right top;
+background-position: no-repeat;
+background-image: url(img/f03.png);
+}
