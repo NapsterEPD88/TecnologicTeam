@@ -1,0 +1,63 @@
+
+<HTML>
+
+<HEAD>
+
+<title>Problema del contenido flotante</title>
+
+</HEAD>
+<style type="text/css">
+  
+  #contenedor {
+    background-color: blue;
+ }
+
+#Izquierda {
+    background-color: green;
+    width: 20%;
+    float:left;
+}
+#centro {
+    background-color: yellow;
+    width: 60%;
+    float:left;
+  }
+
+#derecha {
+    background-color: red;
+    width: 20%;
+    float:left;
+  }
+
+.romper {
+    clear:both;
+    background-color: orange;
+  
+ }
+</style>
+<body>
+
+
+<div id="contenedor"> 
+ <div class="romper"><p>Estoy dentro del div contenedor</p>
+ </div>
+  <div id="Izquierda">
+    <p>Div de la izquierda</p>
+    
+  </div>
+  <div id="centro">
+    <p>Contenido del div central</p>
+    
+  </div id="derecha">
+  <div>
+    <p>Div de la derecha</p>
+  </div>
+  
+  <div>
+    <p>Soy el elemento parrafo debajo del DIV contenedor</p>
+  </div>
+</div>
+
+  </body>
+  
+</HTML>

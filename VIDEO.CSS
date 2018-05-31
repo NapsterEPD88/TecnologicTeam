@@ -1,0 +1,21 @@
+video {
+	border-radius: 20px 20px 20px 20px;
+	border: 2px solid red;
+	padding: 20px;
+	
+	background: grey;
+	margin: 0 auto;
+	display: block;
+	min-width: 240px;
+	max-width: 640px;
+
+
+
+}
+
+body>p{
+	margin-left:30%;
+	
+	color: red;
+	font-size: 30px;
+}
