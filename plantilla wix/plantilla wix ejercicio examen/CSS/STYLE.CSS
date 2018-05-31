@@ -1,0 +1,188 @@
+header{
+	background-color: rgb(224, 224, 224);
+	float: left;
+	width: 100%;
+}
+
+header>h1{
+	float: left;
+	margin-top: 0;
+	margin-left: 20%;
+}
+
+header>nav>ul{
+	float: right;
+	margin-right: 20%;
+}
+
+header>nav>ul>li{
+	display: inline-block;
+	margin-right: 20px;
+
+
+
+}
+
+header>nav>ul>li>a{
+	text-decoration: none;
+	color:black;
+	text-transform: uppercase;
+}
+
+#talentos>div>img{
+	width: 100%;
+	height: auto;
+	position: relative;
+
+}
+
+#talentos>div>h2{
+	position: absolute;
+	top:15%;
+	left: 20%;
+	right: 70%;
+	color: white;
+	text-transform: uppercase;
+	font-size: 55px;
+}
+
+#talentos>div>p{
+	position: absolute;
+	top:55%;
+	left: 20%;
+	color: white;
+	font-size: 30px;
+}
+
+#talentos>div>button{
+	position: absolute;
+	top:65%;
+	left: 20%;
+}
+
+
+
+#profesiones{
+	background-color: yellow;
+	width: 90%;
+	padding-top: 5%;
+	padding-bottom:10%;
+	float: left;
+	padding-left: 10%;
+
+
+
+	
+	
+}
+
+.iconos{
+	display: inline-block;
+	margin-left: 8%;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	background-color: white;
+	padding:60px;
+	float: left;
+
+	
+	
+
+}
+
+
+.iconos>img{
+	background-color: white;
+	
+	width: 60px;
+
+}
+
+.iconos>p{
+	text-align: justify;
+	text-transform: uppercase;
+	margin-top: 100px;
+	margin-left: -20px;
+}
+#nosotros{
+	margin-left: 20%;
+	display: block;
+float: left;
+width: 100%;
+background-color: rgba(224,224,244);
+	
+height: auto;
+}
+
+
+
+#nosotros>h2{
+	margin-left: 5%;
+	font-size: 50px;
+	text-transform: uppercase;
+
+}
+
+#nosotros>p{
+	margin-left: 5%;
+	font-size: 25px;
+}
+
+
+
+#nosotros>div>p{
+	font-size: 20px;
+	text-align: center;
+
+}
+.fotos{
+	
+	display: inline-block;
+	
+
+}
+
+.fotos>img{
+	width: 200px;
+	height: auto;
+	margin-left: 40px;
+	display: inline-block;
+	
+}
+
+#columnas>p{
+	width: 30%;
+	height: auto;
+	display:inline-block;
+	margin-left: 20px;
+	text-align: justify;
+	float: left;
+	font-size: 10px;
+
+
+
+}
+ #contactanos{
+ 	background: black;
+
+ 	float: left;
+ 	width: 100%;
+ }
+ #contactanos>h2{
+ 	color:white;
+ }
+  #contactanos>p{
+ 	color:white;
+ }
+
+ #contacto>p{
+ 	color:white;
+ }
+
+
+ footer{
+ 	background-color: rgb(224, 224, 224);
+ 	float: left;
+ 	width: 100%;
+ }

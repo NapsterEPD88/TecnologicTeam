@@ -1,0 +1,11 @@
+div {
+	width: 32px;
+	height: 32px;
+	background: url(../img/sprite1.png) 0 0;
+	transition: background 6s;
+
+}
+
+button:hover~div{
+	background: url(../img/sprite1.png) -320px 0px;
+}
