@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Jorge García Castro">
+	<title>Múltiplos</title>
+	<body>
+		<h2>Estos son los nombres de los alumnos:</h2>
+		<p id="alumnos"></p>
+		<p id="blue1"></p>
+<script type="text/javascript">
+	var alumnos = ["Isaac", "Guillem", "Miquel", "Adrian", "Erik", "Cristian"];
+
+
+      document.getElementById("alumnos").innerHTML = alumnos.toString();
+
+      var blue1=document.getElementsByIdName("blue1");
+      blue1[0].style.backgroundColor="blue";
+
+      var blue1=["Sonia", "Vero"];
+      document.getElementById("blue1").innerHTML = blue1.toString();
+      
+
+</script>
+</body>
+</html>

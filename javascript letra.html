@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Letras</title>
+</head>
+<body>
+	<p id="letra"></p>
+<script type="text/javascript">
+	var letra=window.prompt("Introduce tu letra");
+switch (letra) {
+    case "a":
+        letra = "a";
+        break;
+    case "e":
+         letra= "e";
+        break;
+    case "i":
+        letra = "i";
+        break;
+    case "o":
+        letra = "o";
+        break;
+    case "u":
+        letra = "u";
+        break;
+    default: 
+    letra = "consonante";
+    
+}
+document.getElementById("letra").innerHTML = "Tu letra es" + " " + letra;
+</script>
+</script>
+
+</body>
+</html>
