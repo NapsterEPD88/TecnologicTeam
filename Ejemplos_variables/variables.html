@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Variables</title>
+</head>
+ 
+
+ <!--	<script type="text/javascript">
+		var nota=window.prompt("introduce la nota para consulta");
+		var respuesta=window.confirm("Estas bien?");
+		document.write(typeof respuesta);
+		document.write(respuesta);
+		if (nota<5){
+			document.write("suspenso");
+		}
+		else if (nota<6){
+			document.write("aprobado");
+		}
+		else if (nota<7){
+			document.write("bien");
+		}
+		else if (nota<8.5){
+			document.write("notable");
+		}
+		else {
+			document.write("sobresaliente");
+		}
+		
+	</script>-->
+	<!--<p>Click the button to demonstrate the prompt box.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+
+<script>
+   function myFunction() {
+   var person = prompt("Please enter your name", "Adrian");
+   if (person != null) {
+   document.getElementById("demo").innerHTML =
+       "Hello " + person + "! How are you today?";
+    }
+}
+</script>-->
+
+<!-- script>
+	var letra=window.prompt("introduce una letra");
+
+switch (letra) {
+    case "a":
+         document.write("has introducido la vocal a");
+        break;
+    case"e":
+        document.write("has introducido la vocal e");
+        break;
+    case "i":
+         document.write("has introducido la vocal i");
+        break;
+    case"o":
+        document.write("has introducido la vocal o");
+        break;
+    case "u":
+         document.write("has introducido la vocal u");
+        break;
+   default:
+    document.write("has introducido una consonante");
+}
+
+</script>-->
+
+
+<!--<script >
+	var numero1=window.prompt("introduce el primer numero ");
+	var numero2=window.prompt("introduce el segundo numero ")	
+		
+		if (numero1>numero2){
+			document.write("numero 1 mayor que numero 2");
+		}
+		else if(numero1<numero2){
+            document.write("numero2 mayor que numero 1");
+		}
+	 else {
+			document.write("numeros iguales");
+		}
+		
+</script>-->
+
+<!-- ******************** js para datas *************** -->
+
+<!--<script>
+var fecha = new Date ();      
+var dia_semana = fecha.getDay();
+var dia_mes = fecha.getDate();
+var mes = fecha.getMonth ();
+var anio = fecha.getYear();
+if ( anio < 1900 ) {
+anio = 1900 + fecha.getYear();
+}
+mes += 1;
+if (mes < 10) {
+mes = '0' + mes;
+}
+if (dia_mes < 10) {
+dia_mes = '0' + dia_mes;
+}
+if (dia_semana == 0) { dia_semana = 'Domingo, '; }
+if (dia_semana == 1) { dia_semana = 'Lunes, '; }
+if (dia_semana == 2) { dia_semana = 'Martes, '; }
+if (dia_semana == 3) { dia_semana = 'Miércoles, '; }
+if (dia_semana == 4) { dia_semana = 'Jueves, '; }
+if (dia_semana == 5) { dia_semana = 'Viernes, '; }
+if (dia_semana == 6) { dia_semana = 'Sábado, '; }
+var nb_mes = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+document.write ( dia_mes + ' de ' + nb_mes[mes-1] + ' de ' + anio);
+</script>-->
+
+
+<!--<script>
+     var f = new Date();
+document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());   
+    </script>-->
+
+
+<!--<script>
+		var dia = window.prompt("Introduce el día del mes");
+		 var mes = window.prompt("Introduce el mes del año");
+		if ((dia>=1 && (mes>=1 && mes<=12))  &&
+         
+         ((mes==1||mes==3||mes==5||mes==7||mes==8||mes==10||mes==12) && dia<=31) || 
+         
+         (mes==2 && dia<=28) ||
+         
+         ((mes==4||mes==6||mes==9||mes==11) && dia<=30))    	
+		
+	        {document.write("yupiii");
+			}
+		else {
+			document.write("nooo");
+		
+			}
+	
+      
+		if (mes>=1&&mes<=12){
+			document.write("yupiii");
+			}
+		else {
+			document.write("nooo");
+		
+			}
+
+		
+	</script>-->
+
+
+<!--<h2>JavaScript Loops</h2>
+
+<p id="demo"></p>-->
+
+<!--<script>
+/*var text = "";
+var i;
+for (i = 0; i <=20; i++) {
+    text += "The number is " + i + "<br>";
+}
+document.getElementById("demo").innerHTML = text;*/
+</script>
+
+
+<script>
+  /*for (var i = 1; i <= 100; i++){
+if (i%13==0){
+	document.write("<p><strong>soy el numero "+i+" y soy multiple de 13 </strong></p>");
+}
+else{
+	document.write("soy el numero "+i+" y NO soy multiple de 13");
+}
+ } */
+
+</script>-->
+
+<!--  <h1>Nombre Colegas</h1>
+
+
+<script>
+
+    var alumnos=["Isaac","Vero","Sonia","Pablo","Guillem","Miguel","Juan","Juan Diego","Zakaria","Adrian","Erik","Cristian"];
+    
+    for (var i=0;i<alumnos.length;i++){
+	
+		if (alumnos[i]=="Vero"||alumnos[i]=="Sonia"){
+		      document.write("<span style='color:yellow'>Posicion " + (i+1) + ": " + alumnos[i] + "</span><br>");
+	    }
+		else{
+		      document.write("<span>Posicion " + (i+1) + ": " + alumnos[i] + "</span><br>");	
+	    }
+  	}
+
+</script>  --> 
+
+ <!-- <h1>Nombre Colegas</h1>
+
+
+<script>
+
+    var alumnos=["Isaac","Vero","Sonia","Pablo","Guillem","Miguel","Juan","Juan Diego","Zakaria","Adrian","Erik","Cristian"];
+    
+    for (var i=alumnos.length-1;i>=0;i--){
+	    
+	    if (alumnos[i]=="Vero"||alumnos[i]=="Sonia"){
+		      document.write("<span style='color:yellow'>Posicion " + (i+1) + ": " + alumnos[i] + "</span><br>");
+	    }
+		else{
+		      document.write("<span>Posicion " + (i+1) + ": " + alumnos[i] + "</span><br>");	
+	    }
+  	}
+
+</script>  -->
+
+
+<!--  <h2>JavaScript while</h2>
+
+<p id="demo"></p>
+
+<script>
+var text = "";
+var i = 0;
+while (i < 10) {
+    text += "<br>The number is " + i;
+    i++;
+}
+document.getElementById("demo").innerHTML = text;
+</script>  -->
+
+
+<!--  <h2>JavaScript do ... while</h2>
+
+<p id="demo"></p>
+
+<script>
+var text = ""
+var i = 0;
+
+do {
+    text += "<br>The number is " + i;
+    i++;
+}
+while (i < 10);  
+
+document.getElementById("demo").innerHTML = text;
+</script>  -->
+
+
+<!--   <h1>Nombre Colegas</h1>
+
+
+<script>
+
+    var alumnos=["Isaac","Vero","Sonia","Pablo","Guillem","Miguel","Juan","Juan Diego","Zakaria","Adrian","Erik","Cristian"];
+    
+   
+  	var i=0;
+    while(i<alumnos.length){
+	    if (alumnos[i]=="Vero"||alumnos[i]=="Sonia"){
+		      document.write("<span style='color:yellow'>Posicion " + (i+1) + ": " + alumnos[i] + "</span><br>");
+	    }
+		else{
+		      document.write("<span>Posicion " + (i+1) + ": " + alumnos[i] + "</span><br>");	
+        }
+        i++;
+    }
+
+</script>  -->
+
+
+<!--      <h2>JavaScript String Methods</h2>
+
+<p>The indexOf() method returns the position of the first occurrence of a specified text:</p>
+
+<p id="demo"></p>
+
+<script>
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("P");
+document.getElementById("demo").innerHTML = pos;
+</script>  -->
+
+ <!--    <h2>JavaScript String Methods</h2>
+
+<p>The indexOf() method accepts a second parameter as the starting position for the search:</p>
+
+<p id="demo"></p>
+
+<script>
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("occ",15);
+document.getElementById("demo").innerHTML = pos;
+</script>
+<h2>JavaScript String Methods</h2>
+
+<p>The substr() method extract a part of a string
+and returns the extracted parts in a new string:</p>
+
+<p id="demo"></p>
+
+<script>
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(7,6);
+document.getElementById("demo").innerHTML = res;
+</script>    -->
+<!--<h2>JavaScript String Methods</h2>
+
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Please visit Microsoft!</p>
+
+<script>
+function myFunction() {
+    var str = document.getElementById("demo").innerHTML; 
+    var txt = str.replace("Microsoft","W3Schools");
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>  -->
+
+
+<!--  <h2>JavaScript String Methods</h2>
+
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Please visit Microsoft!</p>
+
+<script>
+function myFunction() {
+    var str = document.getElementById("demo").innerHTML; 
+    var txt = str.replace(/MICROSOFT/i,"W3Schools");
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>   -->
+ 
+
+
+
+<!--  <h2>JavaScript String Methods</h2>
+
+<p>Replace all occurrences of "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Please visit Microsoft and Microsoft!</p>
+
+<script>
+function myFunction() {
+    var str = document.getElementById("demo").innerHTML; 
+    var txt = str.replace(/Microsoft/g,"W3Schools");
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>   -->
+
+<!--  <p>Click "Try it" to display the first array element, after a string split.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var str = "a,b,c,d,e,f";
+    var arr = str.split(",");
+    document.getElementById("demo").innerHTML = arr[0];
+}
+</script>
+
+
+<p id="demo1"></p>
+
+<script>
+var str = "Hello";
+var arr = str.split("");
+var text = "";
+var i;
+for (i = 0; i < arr.length; i++) {
+    text += arr[i] + "<br>"
+}
+document.getElementById("demo1").innerHTML = text;
+</script>  -->
+
+<!--
+<h2>JavaScript Array Methods</h2>
+
+<h2>pop()</h2>
+
+<p>The pop() method removes the last element from an array.</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits;
+fruits.pop();
+document.getElementById("demo2").innerHTML = fruits;
+</script>
+-->
+<!--
+<h2>JavaScript Array Methods</h2> 
+
+<h2>pop()</h2>
+
+<p>The pop() method removes the last element from an array.</p>
+
+<p>The return value of the pop() method is the removed item.</p>
+
+<p id="demoa1"></p>
+<p id="demoa2"></p>
+<p id="demoa3"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demoa1").innerHTML = fruits;
+document.getElementById("demoa2").innerHTML = fruits.pop();
+document.getElementById("demoa3").innerHTML = fruits;
+</script>
+
+
+-->
+<!--
+
+<h2>push()</h2>
+
+<p>The push() method appends a new element to an array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+    fruits.push("Kiwi");
+    document.getElementById("demo").innerHTML = fruits;
+}
+</script>
+-->
+
+<!--
+<h2>JavaScript Array Methods</h2> 
+
+<h2>shift()</h2>
+
+<p>The shift() method removes the first element of an array (and "shifts" all other elements to the left):</p>
+
+<p id="demob1"></p>
+<p id="demob2"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demob1").innerHTML = fruits;
+fruits.shift();
+document.getElementById("demob2").innerHTML = fruits;
+</script>
+
+-->
+<!--
+
+
+<h2>JavaScript Array Methods</h2> 
+
+<h2>shift()</h2>
+
+<p>The shift() method returns the element that was shifted out.</p>
+
+<p id="democ1"></p>
+<p id="democ2"></p>
+<p id="democ3"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("democ1").innerHTML = fruits;
+document.getElementById("democ2").innerHTML = fruits.shift();
+document.getElementById("democ3").innerHTML = fruits;
+</script>
+  -->
+
+<!--
+
+  <h2>JavaScript Array Methods</h2> 
+
+<h2>unshift()</h2>
+
+<p>The unshift() method adds new elements to the beginning of an array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demoa"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demoa").innerHTML = fruits;
+
+function myFunction() {
+    fruits.unshift("Lemon");
+    document.getElementById("demoa").innerHTML = fruits;
+}
+</script>
+
+
+
+
+<h2>JavaScript Array Methods</h2> 
+
+<h2>unshift()</h2>
+
+<p>The unshift() method returns the length of the new array:</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits;
+document.getElementById("demo2").innerHTML = fruits.unshift("Lemon");
+document.getElementById("demo3").innerHTML = fruits;
+</script>
+
+<h2>JavaScript Array Methods</h2>
+
+<h2>splice()</h2>
+
+<p>The splice() method adds new elements to an array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demob"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demob").innerHTML = fruits;
+function myFunction() {
+    fruits.splice(2, 0, "Lemon", "Kiwi");
+    document.getElementById("demob").innerHTML = fruits;
+}
+</script>
+
+
+<h2>JavaScript Array Methods</h2>
+
+<h2>splice()</h2>
+
+<p>The splice() method adds new elements to an array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demox"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demox").innerHTML = fruits;
+function myFunction() {
+    fruits.splice(2, 0, "Lemon", "Kiwi");
+    document.getElementById("demox").innerHTML = fruits;
+}
+</script>
+
+
+
+<h2>JavaScript Array Methods</h2>
+
+<h2>splice()</h2>
+
+<p>The splice() methods can be used to remove array elements.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demoz"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demoz").innerHTML = fruits;
+function myFunction() {
+    fruits.splice(0, 1);
+    document.getElementById("demoz").innerHTML = fruits;
+}
+</script>
+
+
+<h2>JavaScript Array Methods</h2>
+
+<h2>concat()</h2>
+
+<p>The concat() method is used to merge (concatenate) arrays:</p>
+
+<p id="demow"></p>
+
+<script>
+var myGirls = ["Cecilie", "Lone"];
+var myBoys = ["Emil", "Tobias", "Linus"];
+var myChildren = myGirls.concat(myBoys);
+
+document.getElementById("demow").innerHTML = myChildren;
+</script>
+
+
+<h2>JavaScript Array Methods</h2>
+
+<h2>concat()</h2>
+
+<p>The concat() method is used to merge (concatenate) arrays:</p>
+
+<p id="demor"></p>
+
+<script>
+var arr1 = ["Cecilie", "Lone"];
+var arr2 = ["Emil", "Tobias", "Linus"];
+var arr3 = ["Robin", "Morgan"];
+
+var myChildren = arr1.concat(arr2, arr3); 
+
+document.getElementById("demor").innerHTML = myChildren;
+</script>
+
+
+
+<h2>JavaScript Array Methods</h2>
+
+<h2>concat()</h2>
+
+<p>The concat() method can also merge values to arrays:</p>
+
+<p id="demot"></p>
+
+<script>
+var arr1 = ["Cecilie", "Lone"];
+var myChildren = arr1.concat(["Emil", "Tobias", "Linus"]); 
+document.getElementById("demot").innerHTML = myChildren;
+</script>
+
+
+<h2>JavaScript Array Methods</h2>
+
+<h2>slice()</h2>
+
+<p>This example slices out a part of an array starting from array element 1 ("Orange"):</p>
+
+<p id="demoy"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1);
+document.getElementById("demoy").innerHTML = fruits + "<br><br>" + citrus;
+</script>
+
+<h2>JavaScript Array Methods</h2> 
+
+<h2>slice()</h2>
+
+<p>When the slice() method is given two arguments, it selects array elements from the start argument, and up to (but not included) the end argument:</p>
+
+<p id="demou"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1,3);
+document.getElementById("demou").innerHTML = fruits + "<br><br>" + citrus;
+</script>
+
+
+<h2>JavaScript Array Methods</h2> 
+
+<h2>toString()</h2>
+
+<p>The toString() method returns an array as a comma separated string:</p>
+
+<p id="demom"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demom").innerHTML = fruits.toString();
+</script>
+
+
+-->
+<!--
+<h2>JavaScript Array Sort</h2>
+
+<p>Click the button to sort the array in ascending order.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="1demo"></p>
+
+<script>
+var pointss = [40, 100, 1, 5, 25, 10];
+document.getElementById("1demo").innerHTML = points;    
+
+function myFunction() {
+    points.sort(function(a, b){return a - b});
+    document.getElementById("1demo").innerHTML = points;
+}
+</script>
+-->
+<!--
+<h2>JavaScript Array Sort</h2>
+
+<p>Click the button to sort the array in descending order.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="2demo"></p>
+
+<script>
+var points = [40, 100, 1, 5, 25, 10];
+document.getElementById("2demo").innerHTML = points;
+
+function myFunction() {
+    points.sort(function(a, b){return b - a});
+    document.getElementById("2demo").innerHTML = points;
+}
+</script>
+
+-->
+<!--
+
+<h2>JavaScript Array Sort</h2>
+
+<p>Click the buttons to sort the array alphabetically or numerically.</p>
+
+<button onclick="myFunction1()">Sort Alphabetically</button>
+<button onclick="myFunction2()">Sort Numerically</button>
+
+<p id="demoq"></p>
+
+<script>
+var points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demoq").innerHTML = points;    
+
+function myFunction1() {
+    points.sort();
+    document.getElementById("demoq").innerHTML = points;
+}
+function myFunction2() {
+    points.sort(function(a, b){return a - b});
+    document.getElementById("demoq").innerHTML = points;
+}
+</script>
+
+-->
+<!--
+
+<h2>JavaScript Array Sort</h2>
+
+<p>Click the button (again and again) to sort the array in random order.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demof"></p>
+
+<script>
+var points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demof").innerHTML = points;    
+
+function myFunction() {
+    points.sort(function(a, b){return 0.5 - Math.random()});
+    document.getElementById("demof").innerHTML = points;
+}
+</script>
+
+-->
+<!--
+
+<p>A loop with a break.</p>
+
+<p id="udemo"></p>
+
+<script>
+var text = "";
+var i;
+for (i = 0; i < 10; i++) {
+    if (i === 3) { break; }
+    text += "The number is " + i + "<br>";
+}
+document.getElementById("udemo").innerHTML = text;
+</script>
+
+
+<p>A loop which will skip the step where i = 3.</p>
+
+<p id="idemo"></p>
+
+<script>
+var text = "";
+var i;
+for (i = 0; i < 10; i++) {
+    if (i === 3) { continue; }
+    text += "The number is " + i + "<br>";
+}
+document.getElementById("idemo").innerHTML = text;
+</script>
+
+-->
+
+
+<p id="kdemo"></p>
+
+<script>
+var cars = ["BMW", "Volvo", "Saab", "Ford"];
+var text = "";
+
+list: {
+    text += cars[0] + "<br>"; 
+    text += cars[1] + "<br>"; 
+    text += cars[2] + "<br>"; 
+    break list;
+    text += cars[3] + "<br>"; 
+    text += cars[4] + "<br>"; 
+    text += cars[5] + "<br>"; 
+}
+
+document.getElementById("kdemo").innerHTML = text;
+</script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

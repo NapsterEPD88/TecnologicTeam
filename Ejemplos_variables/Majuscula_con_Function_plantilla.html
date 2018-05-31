@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>inicial a majusculas(con_funcuiones)</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var cadena=window.prompt("Introduce tu nombre");
+
+		cadena=inicialMayuscula(cadena);
+		
+		document.write(cadena);
+        
+        function inicialMayuscula(c){
+			var palabras=c.split(" ");
+	        for(var i=0;i<palabras.length;i++){
+	                 palabras[i]=palabras[i].charAt(0).toUpperCase()+palabras[i].slice(1).toLowerCase();
+	           
+	        }
+
+	        return palabras.join(" ");
+        }  
+
+	</script>
+</body>
+</html>

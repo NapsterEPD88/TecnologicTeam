@@ -1,0 +1,354 @@
+<!--<!DOCTYPE html>
+
+<html><head><title>Ejemplo aprenderaprogramar.com</title><meta charset="utf-8">
+
+<style type="text/css"> label{display:block;margin:5px;}</style>
+
+<script type="text/javascript">
+
+ window.onload = function () {             var ejemplo = document.getElementById('ejemplo');
+
+                                                               ejemplo.addEventListener("click", ejecutarEjemplo);         }
+
+function ejecutarEjemplo () {
+
+var formularios = document.forms; alert('El número de formularios en el documento es: '+formularios.length);        }
+
+</script></head>
+
+<body><div id="cabecera"><h2>Cursos aprenderaprogramar.com</h2><h3>Ejemplos JavaScript</h3></div>
+
+<div style="color:blue; margin:20px;" id ="ejemplo">Pulsa aquí</div>
+
+<form name ="formularioContacto" method="get" action="accion1.html">
+
+<h2>Formulario de contacto</h2>
+
+<label>Nombre:<input id="nombreFormContacto" type="text" name="nombre" /></label>
+
+<label>Apellidos:<input id="apellidosFormContacto" type="text" name="apellidos" /></label>
+
+<label><input id ="botonEnvio1" type="submit" value="Enviar"></label>
+
+</form>
+
+<form name ="formularioReclamacion" method="get" action="accion2.html">
+
+<h2>Formulario de reclamación</h2>
+
+<label>Motivo reclamación:<input id="motivoFormReclama" type="text" name="motivo" /></label>
+
+<label>Fecha del hecho:<input id="fechaFormReclama" type="text" name="fecha" /></label>
+
+<label><input id="botonEnvio2" type="submit" value="Enviar"></label>
+
+</form>   -->
+
+
+
+<!--
+<!DOCTYPE html>
+
+<html><head><title>Ejemplo aprenderaprogramar.com</title><meta charset="utf-8">
+
+<style type="text/css"> label{display:block;margin:5px;}</style>
+
+<script type="text/javascript">
+
+ window.onload = function () {
+
+                var ejemplo = document.getElementById('ejemplo');
+
+                ejemplo.addEventListener("click", ejecutarEjemplo);
+
+}
+
+ 
+
+function ejecutarEjemplo () {
+
+var msg = '';
+
+var formularios = document.forms;
+
+for (var i=0; i<formularios.length;i++){
+
+                for (var j=0; j<formularios[i].elements.length; j++){
+
+                               msg = msg + '\n\nElemento '+j+ ' del formulario '+(i+1)+ ' tiene id: '+ formularios[i].elements[j].id;
+
+                               msg = msg + ' y name: ' + formularios[i].elements[j].name;
+
+                }
+
+}
+
+alert (msg);
+
+}
+
+ 
+
+</script>
+
+</head>
+
+<body><div id="cabecera"><h2>Cursos aprenderaprogramar.com</h2><h3>Ejemplos JavaScript</h3></div>
+
+<div style="color:blue; margin:20px;" id ="ejemplo">Pulsa aquí</div>
+
+ 
+
+<form name ="formularioContacto" method="get" action="accion1.html">
+
+<h2>Formulario de contacto</h2>
+
+<label>Nombre:<input id="nombreFormContacto" type="text" name="nombre" /></label>
+
+<label>Apellidos:<input id="apellidosFormContacto" type="text" name="apellidos" /></label>
+
+<label><input id ="botonEnvio1" type="submit" value="Enviar"></label>
+
+</form>
+
+<form name ="formularioReclamacion" method="get" action="accion2.html">
+
+<h2>Formulario de reclamación</h2>
+
+<label>Motivo reclamación:<input id="motivoFormReclama" type="text" name="motivo" /></label>
+
+<label>Fecha del hecho:<input id="fechaFormReclama" type="text" name="fecha" /></label>
+
+<label><input id="botonEnvio2" type="submit" value="Enviar"></label>
+
+</form>
+
+</body></html>   -->
+
+
+<!--
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Validación un formulario</title>
+<script type="text/javascript">
+function valida(f) {
+  var ok = true;
+  var msg = "Debes escribir algo en los campos:\n";
+  if(f.elements[0].value == "")
+  {
+    msg += "- Jugador 1\n";
+    ok = false;
+  }
+
+  if(f.elements["jugador2"].value == "")
+  {
+    msg += "- Jugador 2\n";
+    ok = false;
+  }
+
+  if(f.jugador3.value == "")
+  {
+    msg += "- Jugador 3\n";
+    ok = false;
+  }
+
+  if(ok == false)
+    alert(msg);
+  return ok;
+}
+</script>
+</head>
+<body>
+<form id="miForm" action="" method="get" onsubmit="return valida(this)">
+<p>
+Jugador 1: <input type="text" id="jugador1" />
+<br />
+Jugador 2: <input type="text" id="jugador2" />
+<br />
+Jugador 3: <input type="text" id="jugador3" />
+<br />
+<input type="submit" value="Enviar" />
+<input type="reset" value="Borrar" />
+</p>
+</form>
+</body>
+</html>  -->
+
+
+<!--
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> ejemplos_forms</title>
+</head>
+<body>
+
+<style type="text/css">
+form#pago {
+margin:auto;
+background: Green;
+color: white;
+font-size: 12px;
+padding: 30px;
+width: 350px;
+border:solid 10px LightSteelBlue;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+}
+
+form#pago fieldset {
+border: none;
+} 
+
+form#pago input{
+font-size:12px;
+background: yellow;
+border:solid 1px Green;
+border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+float: right;
+margin-right: 15px;
+width: 200px;
+}
+
+form#pago ol li {
+line-height: 25px;
+list-style: none;
+}
+
+form#pago [required]{
+border:solid 1px red;
+} 
+
+input:required {
+outline: 1px solid red;
+}
+</style>
+</head>
+
+<body>
+
+<form id="pago">
+<fieldset>
+<legend>Datos del comprador</legend>
+<ol>
+<li>
+<label for="nombre">Nombre</label>
+<input id="nombre" name="nombre" type="text" placeholder="Escribe tu nombre completo" required autofocus>
+</li>
+<li>
+<label for="email">Email</label>
+<input id="email" name="email" type="email" placeholder="ejemplo@um.es" required>
+</li>
+<li>
+<label for="telefono">Teléfono</label>
+<input id="telefono" name="telefono" type="tel" placeholder="Ej. +34668899999" required>
+</li>
+<li>
+<label for="pais">País</label>
+<input id="pais" name="pais" type="text" required>
+</li>
+</ol>
+</fieldset>
+<fieldset>
+<legend>Datos de tarjeta de crédito o débito</legend>
+<ol>
+<li>
+<label for="numtarjeta">Número</label>
+<input id="numtarjeta" name="numtarjeta" type="number" placeholder="Ej. 5555-4444-3333-2222" required>
+</li>
+<li>
+<label for="nomtarjeta">Nombre</label>
+<input id="nomtarjeta" name="nomtarjeta" type="text" placeholder="Nombre que figura en la tarjeta" required>
+</li>
+</ol>
+</fieldset>
+-------------------------------------------------
+<fieldset>
+<button type="submit">Confirmar pedido</button>
+</fieldset>
+</form>
+</script>
+
+</body>-->
+ 
+
+
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> ejemplos_forms</title>
+</head>
+<body>
+
+<style type="text/css">
+
+<style>
+form{
+        width:295px;
+    }
+    
+    ul{
+        list-style:none;
+    }
+    
+    label{
+        width:200px;
+        display:block;
+        margin:10px;
+        float:left;
+    }
+</style>
+
+
+<form name='formulario-js' onsubmit='return validar()'>
+<ul>
+<label for='nombre'>Nombre*</label>
+<imput type='text' id='nombre' name='nombre' />
+</li>
+<li>
+<label for='direccion'>Dirección*</label>
+<imput type='text' id='direccion' name='direccion'/>
+</li>
+<li>
+<label for='edad'>Edad</label>
+<imput type='text' id='edad' name='edad' />
+</li>
+<li>
+<label for='email'>E-mail</label>
+<imput type='text' id='email' name='email' />
+</li>
+<li>
+<label for='estudios'>Estudios</label>
+<select id='estudios' name='estudios'>
+<option value=''>Seleccione</option>
+<option>Ningunos</option>
+<option>Primarios</option>
+<option>Bachiller</option>
+<option>Grado</option>
+<option>Master</option>
+</select>
+</li>
+<li>
+<label>
+<input type='checkbox' value='SI' id='acepto'/>
+He leído y acepto las condiciones;
+</label>
+</li>
+</ul>
+<button>Dar de alta</button>
+</form>
+
+A continuación con CSS se proporciona estilo al formulario:

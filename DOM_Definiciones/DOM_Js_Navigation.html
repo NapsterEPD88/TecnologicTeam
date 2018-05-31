@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javi G. Nieto">
+	<title>JS HTML DOM Navigation</title>
+	<style>
+	</style>
+</head>
+<body>
+<h1 id="id01">My First Page</h1>
+<p id="id02"></p>
+
+<script>
+document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML;
+</script>
+
+-------------------------------------------
+
+<h1 id="id01">My First Page</h1>
+<p id="id02"></p>
+
+<script>
+document.getElementById("id02").innerHTML = document.getElementById("id01").firstChild.nodeValue;
+</script>
+
+---------------------------------------------
+
+<h1 id="id01">My First Page</h1>
+<p id="id02"></p>
+
+<script>
+document.getElementById("id02").innerHTML = document.getElementById("id01").childNodes[0].nodeValue;
+</script>
+----------------------------------------------
+
+<p>Hello World!</p>
+
+<div>
+<p>The DOM is very useful!</p>
+<p>This example demonstrates the <b>document.body</b> property.</p>
+</div>
+
+<script>
+alert(document.body.innerHTML);
+</script>
+
+-----------------------------------------------
+
+
+
+<h1 id="id01">The nodeName Property</h1>
+<p id="id02"></p>
+
+<script>
+document.getElementById("id02").innerHTML = document.getElementById("id01").nodeName;
+</script>
+
+---------------------------------------------
+
+<h1 id="id01">The nodeType Property</h1>
+<p id="id02"></p>
+
+<script>
+document.getElementById("id02").innerHTML = document.getElementById("id01").nodeType;
+</script>
+ 
+ --------------------------------------------
+
+
+
+
+
+
+
+
+</body>
+</html>

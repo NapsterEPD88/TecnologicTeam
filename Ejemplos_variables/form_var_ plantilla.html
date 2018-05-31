@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>inicial majusculas</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function MaysPrimera(string){
+  return string.charAt(0).toUpperCase() + string.slice(1);
+
+		var nombre=window.prompt("Introduce tu nombre");
+		var palabras=nombre.split(" ");
+
+        for(var i=0;i<palabras.length;i++){
+                 palabras[i]=palabras[i].charAt(0).toUpperCase()+palabras[i].slice(1).toLowerCase();
+           
+        }
+         nombre=palabras.join(" ");
+         document.write(nombre); 
+
+}
+	</script>
+</body>
