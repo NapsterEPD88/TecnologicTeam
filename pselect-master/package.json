@@ -1,0 +1,46 @@
+{
+  "name": "pselect.js",
+  "version": "4.0.0",
+  "description": "Crea un select con todas las provincias españolas de forma sencilla.",
+  "main": "dist/pselect.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-umd": "^0.2.0",
+    "umd": "^3.0.1"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0",
+    "eslint": "^4.10.0",
+    "nightwatch": "^0.9.16",
+    "request": "^2.83.0",
+    "serve": "^6.3.1",
+    "webpack": "^3.8.1"
+  },
+  "scripts": {
+    "all": "yarn lint; yarn build ; yarn test",
+    "build": "webpack",
+    "build:watch": "webpack -w",
+    "test": "nightwatch --env default,firefox,ie9,edge",
+    "lint": "eslint src/index.js",
+    "serve": "serve -p 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IagoLast/pselect"
+  },
+  "keywords": [
+    "select",
+    "provincias",
+    "municipios",
+    "municipios",
+    "españoles",
+    "provincias",
+    "españolas"
+  ],
+  "author": "IagoLast",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IagoLast/pselect/issues"
+  },
+  "homepage": "https://github.com/IagoLast/pselect"
+}

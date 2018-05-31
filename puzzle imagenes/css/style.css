@@ -1,0 +1,22 @@
+body {
+background: lightpink; 
+color: indigo; 
+font-weight: bold; 
+}
+figure {
+margin: 0 auto;
+position: relative; 
+width: 360px; height: 480px; 
+cursor: pointer; 
+overflow: hidden; 
+background-size: 360px 100%; 
+background-position: center top; 
+background-repeat: no-repeat; 
+padding: 0 30px; 
+}
+figure div {
+position: absolute; 
+width: 30px; height: 30px; 
+transition-duration: 2s; 
+transition-timing-function: ease-in, ease-out, linear; 
+}
