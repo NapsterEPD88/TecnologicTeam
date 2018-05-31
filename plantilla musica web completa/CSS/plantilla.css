@@ -1,0 +1,341 @@
+body{
+	background-image: url(../imagenes/fondo.jpg);
+	background-repeat: no-repeat;
+	
+	background-size: cover;
+
+}
+
+header{
+
+}
+
+header>h1{
+	float: left;
+	text-align: center;
+	background: red;
+	opacity: 0.7;
+	color:white;
+	padding-top: 20px;
+	padding-bottom: 23px;
+	margin-top: 0;
+	padding-left: 100px;
+
+}
+
+nav{
+	background: red;
+	opacity: 0.7;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	overflow: hidden;
+}
+
+nav>ul>li{
+	display: inline-block;
+	text-align: center;
+	color: white;
+	margin: 0 20px;
+
+	
+	}
+
+li>a{
+	text-decoration: none;
+	color: white;
+
+}
+
+li>a:hover{
+	text-decoration: none;
+	color: white;
+
+}
+
+nav>ul>li:hover{
+	display: inline-block;
+	
+	color: white;
+	opacity: 0.5;
+	text-align: center;
+	margin: 0 20px;
+	
+
+}
+
+nav>ul{
+	display: inline-block;
+	float: right;
+	margin-right: 20%;
+}
+
+
+main{
+	width: 60%;
+	background: rgba(255, 255, 255, 0.6);
+	display: block;
+	float: left;
+	margin-bottom: 20px;
+	margin-left: 20%;
+	text-align: center;
+	padding: 5px;
+	border-radius: 10px 10px 10px 10px;
+	min-height: 500px;
+}
+
+main>div>h1{
+	color: red;
+
+}
+
+main>div>div{
+	float: left;
+
+}
+
+main>div>div>h1{
+	color:red;
+}
+
+main>div>div>h2{
+	color:red;
+}
+
+main>div>div>p{
+	color:red;
+}
+
+main>div>form{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+main>div>form>label{
+	color:red;
+	text-transform: uppercase;
+display: inline-block;
+
+width: 5em;
+margin-right: 20px;
+
+}
+
+main>div>form>input{
+	background-color: red;
+	opacity: 0.6;
+	
+
+
+}
+
+main>div>form>textarea{
+	background-color: red;
+	opacity: 0.6;
+}
+
+#Enviar{
+	color:white;
+}
+main>div>p:first-line { color: red; }
+@keyframes cambia_color {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: black;}
+    100% {background-color: red;}
+}
+
+#fotografías{
+	background: red;
+	float: left;
+	
+	padding:150px 150px;
+	animation-name: cambia_color;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+animation-duration: 10s;
+}
+
+@keyframes cambia_color_2 {
+    0%   {background-color: yellow;}
+    25%  {background-color: black;}
+    50%  {background-color: orange;}
+    100% {background-color: yellow;}
+}
+
+#fotografías2{
+	background: yellow;
+	float: left;
+	padding:150px 150px;
+	animation-name: cambia_color_2;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+animation-duration: 10s;
+}
+
+@keyframes cambia_color_tres {
+    0%   {background-color: black;}
+    25%  {background-color: orange;}
+    50%  {background-color: purple;}
+    100% {background-color: black;}
+}
+
+#fotografías3{
+	background: black;
+	float: left;
+	padding:150px 150px;
+	color:white;
+	animation-name: cambia_color_tres;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+animation-duration: 10s;
+
+}
+
+@keyframes cambia_color_4 {
+    0%   {background-color: orange;}
+    25%  {background-color: purple;}
+    50%  {background-color: green;}
+    100% {background-color: orange;}
+}
+
+#fotografías4{
+	background: orange;
+	float: left;
+	padding:150px 150px;
+	animation-name: cambia_color_4;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+animation-duration: 10s;
+
+	
+}
+
+@keyframes cambia_color_5 {
+    0%   {background-color: purple;}
+    25%  {background-color: green;}
+    50%  {background-color: red;}
+    100% {background-color: purple;}
+}
+
+#fotografías5{
+	background: purple;
+	float: left;
+	padding:150px 150px;
+	color: white;
+	
+	animation-name: cambia_color_5;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+animation-duration: 10s;
+
+	
+}
+
+@keyframes cambia_color_6 {
+    0%   {background-color: green;}
+    25%  {background-color: red;}
+    50%  {background-color: black;}
+    100% {background-color: green;}
+}
+
+#fotografías6{
+	background: green;
+	float: left;
+	padding:150px 150px;
+	animation-name: cambia_color_6;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out;
+animation-duration: 10s;
+}
+
+section{
+	display: block;
+    
+    margin: 20px 10%;
+    
+    
+    
+}
+
+section>div{
+	 
+	 margin: 5px;
+
+
+	 
+    
+    
+    
+}
+
+section>div>p{
+	margin-top: 8px;
+    vertical-align: middle;
+
+}
+
+footer{
+	background: red;
+	opacity: 0.7;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	float: right;
+	width: 100%;
+}
+
+footer>div{
+	overflow: hidden;
+}
+
+footer>div>p{
+	
+	display: inline;
+	float: left;
+	margin-top: 0;
+	color:white;
+
+	
+
+}
+
+
+
+footer>div>ul{
+	float: right;
+	display: inline;
+	margin-right: 20%;
+
+}
+
+footer>div>ul>li{
+	display: inline-block;
+	text-align: center;
+	color: white;
+	margin: 0 20px;
+
+
+	
+	}
+
+footer>div>li>a{
+	text-decoration: none;
+	color: white;
+
+}
+
+footer>div>li>a:hover{
+	text-decoration: none;
+	color: white;
+
+}
+
+footer>div>ul>li:hover{
+	display: inline-block;
+	
+	color: white;
+	opacity: 0.5;
+	text-align: center;
+	margin: 0 20px;
+	
+
+}

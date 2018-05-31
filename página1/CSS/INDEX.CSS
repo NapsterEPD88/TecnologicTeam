@@ -1,0 +1,205 @@
+img {
+	width: 100%
+}
+
+#boton1, #boton2, #boton3, #boton4 {
+
+
+	
+	
+	
+	margin: 8px;
+	background-color: lightblue;
+
+
+
+
+}
+li a {
+    display: inline;
+    color: black;
+    text-align: center;
+    padding:20px;
+    list-style-type: none;
+    text-decoration: none;
+   
+
+   
+}
+
+li a:hover {
+    background-color: grey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    list-style-type: none;
+    display: inline-block;
+}
+
+li{
+	
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	list-style-type: none;
+	
+}
+
+ul li a#Principal {
+
+display:inline-table;
+background: red;
+border-collapse: collapse;
+border: 2px solid red;
+}
+
+ul li a#Pagina2:hover {
+
+display:inline-table;
+background: blue;
+border-collapse: collapse;
+boder: 2px solid blue;
+
+}
+p{
+	
+	margin-right: 20%;
+	float: left;
+}
+
+aside {
+	margin-left: 80%;
+
+	position: absolute;
+
+	
+	
+}
+
+#derecha_arriba {
+	background-color: lightblue;
+	padding: 20px;
+
+
+	
+
+}
+
+#derecha_enmedio {
+	background-color: lightblue;
+	padding: 10px;
+	
+
+}
+
+#derecha_abajo {
+	background-color: lightblue;
+	padding: 0px;
+
+
+}
+
+#contenido_derecha_arriba {
+	background-color: white;
+	
+
+}
+
+#contenido_derecha_enmedio {
+	background-color: white;
+
+	
+
+}
+
+#contenido_derecha_abajo {
+	background-color: white;
+
+
+}
+
+
+
+
+
+
+
+footer div img {
+	width: 40px;
+	height: 40px;
+
+	margin-left: 10px;
+	
+	
+
+
+
+	
+
+}
+
+footer > p {
+	float: right;
+	margin-top: 0px;
+	
+	
+
+
+}
+#rotura {
+
+	clear: both;
+}
+
+footer div {
+	margin-top: 5%;
+	float: left
+	background: lightblue;
+	
+}
+
+footer {
+
+	background-color: lightblue;
+}
+
+footer div div p {
+	margin-top: 0px;
+	float: right;
+	background-color: lightblue;
+}
+
+table {
+    width:100%;
+    border-spacing: 10px;
+    background-color: red;
+
+}
+table, th, td {
+    border: 2px solid black;
+    border-spacing: 10px;
+    padding: 5px;
+    text-align: center;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+    border-spacing: 10px;
+}
+table#t01 tr:nth-child(even) {
+    background-color: grey;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#fff;
+}
+table#t01 th {
+    background-color: lightblue;
+    color: black;
+}
+
+caption {
+font-family: 'Supermercado One', cursive;
+font-size: x-large;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Supermercado+One');
+
