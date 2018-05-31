@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+<head>
+<meta charset="utf-8" />
+<title>Generar ventana javascript</title>
+ <script type="text/javascript" src="js/Javs.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<h1>jmgModal</h1>
+<button onclick="jmgModal('miventana',{
+				title: 'Ventana modal',
+				width: 600,
+				height: 50,
+				content: 'Este es el contenido de la ventana'});"
+        >Modal Simple</button>
+<button onclick="jmgModal('miventana',{
+				title: 'Ventana modal',
+				width: 1000,
+				height: 60,
+        content: '<iframe src=\'https://escss.blogspot.com\'></iframe>'});"
+        >Modal con Iframe</button>
+<button onclick="jmgModal('miventana',{
+				title: 'Ventana modal',
+				width: 100,
+				height: 20,
+        content: '<img src=\'https://1.bp.blogspot.com/-iYDMJD5wZ6Y/WR3R-CrcejI/AAAAAAAANjU/oAO4TVbqJ9IUtmYY4Dn2AkckJ5Zjv3F0QCLcB/s600/esCss-fav.jpg\'>'});"
+        >Modal Imagen</button>
+<button onclick="jmgModal('miventana',{
+				title: 'Ventana modal',
+				width: 400,
+				height: 40,
+        content: 'Esta es una ventana informativa'},
+        ['Aceptar',function(){
+             alert('Has pulsado Aceptar. La ventana se cierra automáticamente');
+        }]);"
+        >Modal con botón "Aceptar"</button>
+<button onclick="jmgModal('miventana',{
+				title: 'Ventana modal',
+				width: 400,
+				height: 40,
+        content: 'En esta ventana se puede realizar una pregunta'},
+        ['Aceptar',function(){
+             alert('Has pulsado Aceptar. La ventana se cierra automáticamente');
+        }],
+        ['Cancelar',function(){
+             alert('Has pulsado Cancelar. La ventana se cierra automáticamente');
+        }]);"
+        >Modal con botones "Aceptar" y "Cancelar"</button>
+<button onclick="jmgModal('miventana',{
+				title: 'Ventana modal',
+				width: 400,
+				height: 40,
+        content: 'Esta ventana es equivalente a la función prompt de javascript. Para mostrar el input es imprescindible que haya un botón de Aceptar. El botón Cancelar es opcional'},
+        ['Aceptar',function(input){
+             alert('Has escrito: '+input);
+        }], /* obligatorio */
+        null, /* boton cancelar, opcional */
+        ['Placeholder del input']);"
+        >Modal con "Aceptar" y un Input</button>
+<button onclick="jmgModal('miventana',{
+				title: 'Ventana modal',
+				width: 400,
+				height: 40,
+        content: 'Cambia la id de la ventana (primer parámetro) para mostrar varias ventanas anidadas.<br><button onclick=\'metaventana()\'>Abrir otra ventana</button>'});"
+        >METAMODAL: Ventana dentro de Ventana</button>
+
+</body>
+</html>
